@@ -147,7 +147,11 @@ a {
             display: flex;
             list-style: none;
             gap: 35px;
-
+            li {
+                &:last-child {
+                    display: none;
+                }
+            }
             a {
                 text-decoration: none;
                 color: $text-dark;
@@ -1869,6 +1873,15 @@ a {
 }
 
 @media (max-width: 768px) {
+    .header .navbar .nav-menu li:last-child {
+        display: block;
+        .btn-primary {
+            display: block !important;
+            width: 280px;
+            margin: 0 auto;
+            color: #fff;
+        }
+    }
     .nav-wrapper {
         .btn-primary {
             display: none;
@@ -3715,7 +3728,7 @@ a {
                 z-index: 100;
                 li {
                     text-align: center;
-                    padding: 10px;
+                    padding: 10px 0;
                     a {
                         font-size: 18px;
                     }
