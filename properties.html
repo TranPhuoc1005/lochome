@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dự án BĐS - PrimeLuxe</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/properties.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Header -->
+        <header class="header">
+            <div class="top-bar">
+                <div class="container">
+                    <div class="top-bar-content">
+                        <div class="contact-info">
+                            <span><i class="fas fa-phone"></i> Hotline: <a href="tel:+84123456789">+84 123 456 789</a></span>
+                            <span><i class="fas fa-envelope"></i> contact@LocHome.vn</span>
+                        </div>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar">
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <div class="logo">
+                            <img src="./assets/img/logo.png" width="200" height="53" alt="LocHome">
+                        </div>
+                        <ul class="nav-menu">
+                            <li><a href="./">Trang chủ</a></li>
+                            <li><a href="./about.html">Giới thiệu</a></li>
+                            <li><a href="./properties.html" class="active">Dự án</a></li>
+                            <li><a href="#">Tin tức</a></li>
+                            <li><a href="./contact.html">Liên hệ</a></li>
+                        </ul>
+                        <a href="tel:+84123456789" class="btn-primary">Tư vấn</a>
+                        <div class="mobile-menu-toggle">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    
+        <main>
+            <!-- Properties Hero Search -->
+            <section class="properties-hero">
+                <div class="container">
+                    <div class="search-box">
+                        <div class="search-box-frame">
+                            <input type="text" placeholder="Tìm kiếm bất động sản...">
+                            <select class="search-select">
+                                <option>Chọn trang thái</option>
+                                <option>Mua bán</option>
+                                <option>Cho thuê</option>
+                            </select>
+                            <select class="search-select">
+                                <option>Loại nhà đất</option>
+                                <option>Nhà ở</option>
+                                <option>Chung cư</option>
+                                <option>Văn phòng</option>
+                                <option>Đất nền</option>
+                            </select>
+                            <button class="btn-settings"><i class="fas fa-cog"></i></button>
+                            <button class="btn-search">Tìm kiếm</button>
+                        </div>
+                        <!-- Advanced Search Dropdown -->
+                        <div class="advanced-search">
+                            <div class="advanced-search-grid">
+                                <select class="advanced-select">
+                                    <option>Tỉnh/ Thành phố</option>
+                                    <option>TP. Hồ Chí Minh</option>
+                                    <option>Hà Nội</option>
+                                    <option>Đà Nẵng</option>
+                                    <option>Cần Thơ</option>
+                                </select>
+                                <input type="text" class="advanced-input" placeholder="Diện tích nhỏ nhất (m²)">
+                                <input type="text" class="advanced-input" placeholder="Diện tích lớn nhất (m²)">
+                            </div>
+                            <div class="advanced-search-grid">
+                                <input type="text" class="advanced-input" placeholder="Phòng ngủ">
+                                <input type="text" class="advanced-input" placeholder="Phòng tắm">
+                                <input type="text" class="advanced-input" placeholder="Bãi đậu xe">
+                            </div>
+                            <div class="price-range">
+                                <label>Khoảng giá: <span class="price-value">0đ - 100.000.000.000đ</span></label>
+                                <div class="range-slider">
+                                    <input type="range" min="0" max="100000000000" value="0" class="range-min">
+                                    <input type="range" min="0" max="100000000000" value="100000000000" class="range-max">
+                                </div>
+                            </div>
+                            <div class="amenities-section">
+                                <label>Tiện nghi</label>
+                                <div class="amenities-grid">
+                                    <label class="amenity-item">
+                                        <input type="checkbox">
+                                        <span>Bảo vệ 24/7</span>
+                                    </label>
+                                    <label class="amenity-item">
+                                        <input type="checkbox">
+                                        <span>Bể bơi</span>
+                                    </label>
+                                    <label class="amenity-item">
+                                        <input type="checkbox">
+                                        <span>Bình nóng lạnh</span>
+                                    </label>
+                                    <label class="amenity-item">
+                                        <input type="checkbox">
+                                        <span>Camera an ninh</span>
+                                    </label>
+                                    <label class="amenity-item">
+                                        <input type="checkbox">
+                                        <span>Internet tốc độ cao</span>
+                                    </label>
+                                    <label class="amenity-item">
+                                        <input type="checkbox">
+                                        <span>Nhà bếp</span>
+                                    </label>
+                                    <label class="amenity-item">
+                                        <input type="checkbox">
+                                        <span>Nội thất đầy đủ</span>
+                                    </label>
+                                    <label class="amenity-item">
+                                        <input type="checkbox">
+                                        <span>Thang máy</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Advanced Search -->
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Properties Content -->
+            <section class="properties-content">
+                <div class="container">
+                    <div class="properties-layout">
+                        <!-- Main Content -->
+                        <div class="properties-main">
+                            <!-- Filter Bar -->
+                            <div class="filter-bar">
+                                <div class="view-toggle">
+                                    <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+                                    <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+                                </div>
+                                <div class="sort-options">
+                                    <label>Mặc định</label>
+                                    <select>
+                                        <option>Mặc định</option>
+                                        <option>Giá tăng dần</option>
+                                        <option>Giá giảm dần</option>
+                                        <option>Mới nhất</option>
+                                        <option>Cũ nhất</option>
+                                    </select>
+                                </div>
+                            </div>
+    
+                            <!-- Properties Grid -->
+                            <div class="properties-grid">
+                                <!-- Property Card 1 -->
+                                <div class="property-card">
+                                    <div class="property-image">
+                                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400" alt="Property">
+                                        <div class="property-badges">
+                                            <span class="badge sale">Giảm 15%</span>
+                                            <span class="badge new">Mới nhất</span>
+                                        </div>
+                                        <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                    </div>
+                                    <div class="property-info">
+                                        <a href="./detail.html" class="link_full"></a>
+                                        <h3>Nhà mặt phố Tôn Đức Thắng</h3>
+                                        <p class="location"><i class="fas fa-map-marker-alt"></i> Q.1, Nguyễn Mạng Tháng 8, P.1</p>
+                                        <div class="property-meta">
+                                            <span><i class="fas fa-bed"></i> Phòng ngủ: 4</span>
+                                            <span><i class="fas fa-bath"></i> Phòng tắm: 2</span>
+                                            <span class="full-width"><i class="fas fa-ruler-combined"></i> Diện tích: 340 m²</span>
+                                        </div>
+                                        <div class="property-footer">
+                                            <span class="price">15.000.000.000 đ</span>
+                                            <span class="date"><i class="far fa-calendar"></i> 16/09/2024</span>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- Property Card 2 -->
+                                <div class="property-card">
+                                    <div class="property-image">
+                                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400" alt="Property">
+                                        <div class="property-badges">
+                                            <span class="badge hot">Hot</span>
+                                            <span class="badge sale-tag">Giảm giá</span>
+                                        </div>
+                                        <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                    </div>
+                                    <div class="property-info">
+                                        <a href="./detail.html" class="link_full"></a>
+                                        <h3>Nhà mặt phố Quận 2</h3>
+                                        <p class="location"><i class="fas fa-map-marker-alt"></i> Q.2, TP.HCM</p>
+                                        <div class="property-meta">
+                                            <span><i class="fas fa-bed"></i> Phòng ngủ: 4</span>
+                                            <span><i class="fas fa-bath"></i> Phòng tắm: 2</span>
+                                            <span class="full-width"><i class="fas fa-ruler-combined"></i> Diện tích: 6,000 m²</span>
+                                        </div>
+                                        <div class="property-footer">
+                                            <span class="price">25.400.000.000 đ</span>
+                                            <span class="date"><i class="far fa-calendar"></i> 10/09/2024</span>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- Property Card 3 -->
+                                <div class="property-card">
+                                    <div class="property-image">
+                                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400" alt="Property">
+                                        <div class="property-badges">
+                                            <span class="badge new">Mới nhất</span>
+                                            <span class="badge sale">Giảm 20%</span>
+                                        </div>
+                                        <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                    </div>
+                                    <div class="property-info">
+                                        <a href="./detail.html" class="link_full"></a>
+                                        <h3>Biệt thự Premier Luxury Kiều Phúc</h3>
+                                        <p class="location"><i class="fas fa-map-marker-alt"></i> Cầu Vĩnh An</p>
+                                        <div class="property-meta">
+                                            <span><i class="fas fa-bed"></i> Phòng ngủ: 2</span>
+                                            <span><i class="fas fa-bath"></i> Phòng tắm: 1</span>
+                                            <span class="full-width"><i class="fas fa-ruler-combined"></i> Diện tích: 120 m²</span>
+                                        </div>
+                                        <div class="property-footer">
+                                            <span class="price">25.480.000.000 đ</span>
+                                            <span class="date"><i class="far fa-calendar"></i> 18/09/2024</span>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- Property Card 4 -->
+                                <div class="property-card">
+                                    <div class="property-image">
+                                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400" alt="Property">
+                                        <div class="property-badges">
+                                            <span class="badge sale">Giảm 15%</span>
+                                            <span class="badge new">Mới nhất</span>
+                                        </div>
+                                        <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                    </div>
+                                    <div class="property-info">
+                                        <a href="./detail.html" class="link_full"></a>
+                                        <h3>Cho thuê căn hộ Thủ Đức</h3>
+                                        <p class="location"><i class="fas fa-map-marker-alt"></i> 11 S.G. 6wả</p>
+                                        <div class="property-meta">
+                                            <span><i class="fas fa-bed"></i> Phòng ngủ: 4</span>
+                                            <span><i class="fas fa-bath"></i> Phòng tắm: 2</span>
+                                            <span class="full-width"><i class="fas fa-ruler-combined"></i> Diện tích: 149 m²</span>
+                                        </div>
+                                        <div class="property-footer">
+                                            <span class="price">3.500.000.000 đ</span>
+                                            <span class="date"><i class="far fa-calendar"></i> 16/09/2024</span>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- Property Card 5 -->
+                                <div class="property-card">
+                                    <div class="property-image">
+                                        <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=400" alt="Property">
+                                        <div class="property-badges">
+                                            <span class="badge hot">Hot</span>
+                                            <span class="badge new">Mới nhất</span>
+                                        </div>
+                                        <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                    </div>
+                                    <div class="property-info">
+                                        <a href="./detail.html" class="link_full"></a>
+                                        <h3>Căn hộ cao cấp gần Hồ Tây</h3>
+                                        <p class="location"><i class="fas fa-map-marker-alt"></i> Q16, P. 6w 6wả</p>
+                                        <div class="property-meta">
+                                            <span><i class="fas fa-bed"></i> Phòng ngủ: 5</span>
+                                            <span><i class="fas fa-bath"></i> Phòng tắm: 3</span>
+                                            <span class="full-width"><i class="fas fa-ruler-combined"></i> Diện tích: 229 m²</span>
+                                        </div>
+                                        <div class="property-footer">
+                                            <span class="price">37.500.000.000 đ</span>
+                                            <span class="date"><i class="far fa-calendar"></i> 14/09/2024</span>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- Property Card 6 -->
+                                <div class="property-card">
+                                    <div class="property-image">
+                                        <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=400" alt="Property">
+                                        <div class="property-badges">
+                                            <span class="badge sale">Giảm giá</span>
+                                            <span class="badge new">Mới nhất</span>
+                                        </div>
+                                        <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                    </div>
+                                    <div class="property-info">
+                                        <a href="./detail.html" class="link_full"></a>
+                                        <h3>Biệt thự sân vườn căn gần sân bay</h3>
+                                        <p class="location"><i class="fas fa-map-marker-alt"></i> Việt Nam</p>
+                                        <div class="property-meta">
+                                            <span><i class="fas fa-bed"></i> Phòng ngủ: 3</span>
+                                            <span><i class="fas fa-bath"></i> Phòng tắm: 1</span>
+                                            <span class="full-width"><i class="fas fa-ruler-combined"></i> Diện tích: 160 m²</span>
+                                        </div>
+                                        <div class="property-footer">
+                                            <span class="price">70.000.000.000 đ</span>
+                                            <span class="date"><i class="far fa-calendar"></i> 16/09/2024</span>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- Property Card 7 -->
+                                <div class="property-card">
+                                    <div class="property-image">
+                                        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400" alt="Property">
+                                        <div class="property-badges">
+                                            <span class="badge sale">Giảm 15%</span>
+                                            <span class="badge new">Mới nhất</span>
+                                        </div>
+                                        <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                    </div>
+                                    <div class="property-info">
+                                        <a href="./detail.html" class="link_full"></a>
+                                        <h3>Chung cư Family House</h3>
+                                        <p class="location"><i class="fas fa-map-marker-alt"></i> 12 Southwest</p>
+                                        <div class="property-meta">
+                                            <span><i class="fas fa-bed"></i> Phòng ngủ: 6</span>
+                                            <span><i class="fas fa-bath"></i> Phòng tắm: 5</span>
+                                            <span class="full-width"><i class="fas fa-ruler-combined"></i> Diện tích: 329 m²</span>
+                                        </div>
+                                        <div class="property-footer">
+                                            <span class="price">78.200.000.000 đ</span>
+                                            <span class="date"><i class="far fa-calendar"></i> 18/09/2024</span>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- Property Card 8 -->
+                                <div class="property-card">
+                                    <div class="property-image">
+                                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400" alt="Property">
+                                        <div class="property-badges">
+                                            <span class="badge hot">Hot</span>
+                                            <span class="badge new">Mới nhất</span>
+                                        </div>
+                                        <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                    </div>
+                                    <div class="property-info">
+                                        <a href="./detail.html" class="link_full"></a>
+                                        <h3>Biệt thự hiện đại N03</h3>
+                                        <p class="location"><i class="fas fa-map-marker-alt"></i> Xuất Way</p>
+                                        <div class="property-meta">
+                                            <span><i class="fas fa-bed"></i> Phòng ngủ: 2</span>
+                                            <span><i class="fas fa-bath"></i> Phòng tắm: 1</span>
+                                            <span class="full-width"><i class="fas fa-ruler-combined"></i> Diện tích: 120 m²</span>
+                                        </div>
+                                        <div class="property-footer">
+                                            <span class="price">15.000.000.000 đ</span>
+                                            <span class="date"><i class="far fa-calendar"></i> 16/09/2024</span>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- Property Card 9 -->
+                                <div class="property-card">
+                                    <div class="property-image">
+                                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=400" alt="Property">
+                                        <div class="property-badges">
+                                            <span class="badge sale">Giảm 15%</span>
+                                            <span class="badge new">Mới nhất</span>
+                                        </div>
+                                        <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                    </div>
+                                    <div class="property-info">
+                                        <a href="./detail.html" class="link_full"></a>
+                                        <h3>Cho thuê căn hộ Star</h3>
+                                        <p class="location"><i class="fas fa-map-marker-alt"></i> D Cap, Mbê Sài East</p>
+                                        <div class="property-meta">
+                                            <span><i class="fas fa-bed"></i> Phòng ngủ: 3</span>
+                                            <span><i class="fas fa-bath"></i> Phòng tắm: 4</span>
+                                            <span class="full-width"><i class="fas fa-ruler-combined"></i> Diện tích: 363 m²</span>
+                                        </div>
+                                        <div class="property-footer">
+                                            <span class="price">5.487.960.000 đ</span>
+                                            <span class="date"><i class="far fa-calendar"></i> 18/09/2024</span>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- Property Card 10 -->
+                                <div class="property-card">
+                                    <div class="property-image">
+                                        <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=400" alt="Property">
+                                        <div class="property-badges">
+                                            <span class="badge hot">Hot</span>
+                                            <span class="badge new">Mới nhất</span>
+                                        </div>
+                                        <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                    </div>
+                                    <div class="property-info">
+                                        <a href="./detail.html" class="link_full"></a>
+                                        <h3>Cho thuê chung cư Riverside</h3>
+                                        <p class="location"><i class="fas fa-map-marker-alt"></i> 43 Hanover, Cedar Vale</p>
+                                        <div class="property-meta">
+                                            <span><i class="fas fa-bed"></i> Phòng ngủ: 3</span>
+                                            <span><i class="fas fa-bath"></i> Phòng tắm: 2</span>
+                                            <span class="full-width"><i class="fas fa-ruler-combined"></i> Diện tích: 440 m²</span>
+                                        </div>
+                                        <div class="property-footer">
+                                            <span class="price">1.500.000.000 đ</span>
+                                            <span class="date"><i class="far fa-calendar"></i> 18/09/2024</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Pagination -->
+                            <div class="pagination">
+                                <button class="page-btn active">1</button>
+                                <button class="page-btn">2</button>
+                                <button class="page-btn">3</button>
+                                <button class="page-btn next"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+    
+                        <!-- Sidebar -->
+                        <aside class="properties-sidebar">
+                            <div class="sidebar-sticky">
+                                <!-- Popular Properties -->
+                                <div class="sidebar-widget">
+                                    <h3>Bất động sản phổ biến</h3>
+                                    <div class="popular-properties">
+                                        <div class="popular-item">
+                                            <a href="./detail.html" class="link_full"></a>
+                                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=100" alt="Property">
+                                            <div class="popular-info">
+                                                <h4>Nhà mặt phố Quận Tân Bình</h4>
+                                                <p class="location"><i class="fas fa-map-marker-alt"></i> 1, Sai At, Montecillo County</p>
+                                                <span class="price">5.000.000.000 đ</span>
+                                            </div>
+                                        </div>
+    
+                                        <div class="popular-item">
+                                            <a href="./detail.html" class="link_full"></a>
+                                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=100" alt="Property">
+                                            <div class="popular-info">
+                                                <h4>Cho thuê biệt thự cao cấp Cdt</h4>
+                                                <p class="location"><i class="fas fa-map-marker-alt"></i> 2367, Karier Street</p>
+                                                <span class="price">6.000.000.000 đ</span>
+                                            </div>
+                                        </div>
+    
+                                        <div class="popular-item">
+                                            <a href="./detail.html" class="link_full"></a>
+                                            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=100" alt="Property">
+                                            <div class="popular-info">
+                                                <h4>Bán nhà mặt tiền Quận 5</h4>
+                                                <p class="location"><i class="fas fa-map-marker-alt"></i> 1, E-D, Bình Thạnh, Tháng 8, P.1</p>
+                                                <span class="price">8.500.000.000 đ</span>
+                                            </div>
+                                        </div>
+    
+                                        <div class="popular-item">
+                                            <a href="./detail.html" class="link_full"></a>
+                                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=100" alt="Property">
+                                            <div class="popular-info">
+                                                <h4>Nhà mặt phố Quận 1</h4>
+                                                <p class="location"><i class="fas fa-map-marker-alt"></i> 1-A, D-Q, Bình Đào S3</p>
+                                                <span class="price">2.400.000.000 đ</span>
+                                            </div>
+                                        </div>
+    
+                                        <div class="popular-item">
+                                            <a href="./detail.html" class="link_full"></a>
+                                            <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=100" alt="Property">
+                                            <div class="popular-info">
+                                                <h4>Cho thuê căn hộ Skyview</h4>
+                                                <p class="location"><i class="fas fa-map-marker-alt"></i> 16-87, Centre Street</p>
+                                                <span class="price">6.000.000.000 đ</span>
+                                            </div>
+                                        </div>
+    
+                                        <div class="popular-item">
+                                            <a href="./detail.html" class="link_full"></a>
+                                            <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=100" alt="Property">
+                                            <div class="popular-info">
+                                                <h4>Nhà mặt phố Quận 1</h4>
+                                                <p class="location"><i class="fas fa-map-marker-alt"></i> 1-A, D-Q, Bình Đào S3</p>
+                                                <span class="price">7.600.000.000 đ</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+        </main>
+    
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-col">
+                        <div class="logo"><img src="./assets/img/ft_logo.png" width="177" height="142" alt="LocHome"></div>
+                        <p>Đối tác tin cậy trong hành trình tìm kiếm ngôi nhà mơ ước của bạn.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+    
+                    <div class="footer-col">
+                        <h4>Về chúng tôi</h4>
+                        <ul>
+                            <li><a href="./about.html">Giới thiệu</a></li>
+                            <li><a href="./properties.html">Dự án</a></li>
+                            <li><a href="#">Tin tức</a></li>
+                            <li><a href="./contact.html">Liên hệ</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer-col">
+                        <h4>Hỗ trợ</h4>
+                        <ul>
+                            <li><a href="#">Hướng dẫn</a></li>
+                            <li><a href="#">Câu hỏi thường gặp</a></li>
+                            <li><a href="#">Chính sách bảo mật</a></li>
+                            <li><a href="#">Điều khoản sử dụng</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer-col">
+                        <h4>Liên hệ</h4>
+                        <ul class="contact-info">
+                            <li><i class="fas fa-map-marker-alt"></i>123 Đường ABC, Quận 1, TP.HCM</li>
+                            <li><i class="fas fa-phone"></i> <a href="tel:+84123456789">+84 123 456 789</a></li>
+                            <li><i class="fas fa-envelope"></i>contact@LocHome.vn</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="footer-bottom">
+                    <p>&copy; 2025 LocHome. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/properties.js"></script>
+</body>
+</html>

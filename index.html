@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocHome - Tìm Ngôi Nhà Lý Tưởng</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Header -->
+        <header class="header">
+            <div class="top-bar">
+                <div class="container">
+                    <div class="top-bar-content">
+                        <div class="contact-info">
+                            <span><i class="fas fa-phone"></i> Hotline: <a href="tel:+84123456789">+84 123 456 789</a></span>
+                            <span><i class="fas fa-envelope"></i> contact@LocHome.vn</span>
+                        </div>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar">
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <div class="logo">
+                            <img src="./assets/img/logo.png" width="200" height="53" alt="LocHome">
+                        </div>
+                        <ul class="nav-menu">
+                            <li><a href="./" class="active">Trang chủ</a></li>
+                            <li><a href="./about.html">Giới thiệu</a></li>
+                            <li><a href="./properties.html">Dự án</a></li>
+                            <li><a href="#">Tin tức</a></li>
+                            <li><a href="./contact.html">Liên hệ</a></li>
+                            <li> <a href="tel:+84123456789" class="btn-primary">Tư vấn</a></li>
+                        </ul>
+                        <a href="tel:+84123456789" class="btn-primary">Tư vấn</a>
+                        <div class="mobile-menu-toggle">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    
+        <main>
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>Tìm <span class="highlight">ngôi nhà</span> lý tưởng của bạn</h1>
+                        <p>Khám phá hàng ngàn bất động sản chất lượng cao phù hợp với mọi nhu cầu của bạn</p>
+                        
+                        <div class="search-box">
+                            <div class="search-box-frame">
+                                <input type="text" placeholder="Tìm kiếm bất động sản...">
+                                <select class="search-select">
+                                    <option>Chọn trang thái</option>
+                                    <option>Mua bán</option>
+                                    <option>Cho thuê</option>
+                                </select>
+                                <select class="search-select">
+                                    <option>Loại nhà đất</option>
+                                    <option>Nhà ở</option>
+                                    <option>Chung cư</option>
+                                    <option>Văn phòng</option>
+                                    <option>Đất nền</option>
+                                </select>
+                                <button class="btn-settings"><i class="fas fa-cog"></i></button>
+                                <button class="btn-search">Tìm kiếm</button>
+                            </div>
+                            <!-- Advanced Search Dropdown -->
+                            <div class="advanced-search">
+                                <div class="advanced-search-grid">
+                                    <select class="advanced-select">
+                                        <option>Tỉnh/ Thành phố</option>
+                                        <option>TP. Hồ Chí Minh</option>
+                                        <option>Hà Nội</option>
+                                        <option>Đà Nẵng</option>
+                                        <option>Cần Thơ</option>
+                                    </select>
+                                    <input type="text" class="advanced-input" placeholder="Diện tích nhỏ nhất (m²)">
+                                    <input type="text" class="advanced-input" placeholder="Diện tích lớn nhất (m²)">
+                                </div>
+                                <div class="advanced-search-grid">
+                                    <input type="text" class="advanced-input" placeholder="Phòng ngủ">
+                                    <input type="text" class="advanced-input" placeholder="Phòng tắm">
+                                    <input type="text" class="advanced-input" placeholder="Bãi đậu xe">
+                                </div>
+                                <div class="price-range">
+                                    <label>Khoảng giá: <span class="price-value">0đ - 100.000.000.000đ</span></label>
+                                    <div class="range-slider">
+                                        <input type="range" min="0" max="100000000000" value="0" class="range-min">
+                                        <input type="range" min="0" max="100000000000" value="100000000000" class="range-max">
+                                    </div>
+                                </div>
+                                <div class="amenities-section">
+                                    <label>Tiện nghi</label>
+                                    <div class="amenities-grid">
+                                        <label class="amenity-item">
+                                            <input type="checkbox">
+                                            <span>Bảo vệ 24/7</span>
+                                        </label>
+                                        <label class="amenity-item">
+                                            <input type="checkbox">
+                                            <span>Bể bơi</span>
+                                        </label>
+                                        <label class="amenity-item">
+                                            <input type="checkbox">
+                                            <span>Bình nóng lạnh</span>
+                                        </label>
+                                        <label class="amenity-item">
+                                            <input type="checkbox">
+                                            <span>Camera an ninh</span>
+                                        </label>
+                                        <label class="amenity-item">
+                                            <input type="checkbox">
+                                            <span>Internet tốc độ cao</span>
+                                        </label>
+                                        <label class="amenity-item">
+                                            <input type="checkbox">
+                                            <span>Nhà bếp</span>
+                                        </label>
+                                        <label class="amenity-item">
+                                            <input type="checkbox">
+                                            <span>Nội thất đầy đủ</span>
+                                        </label>
+                                        <label class="amenity-item">
+                                            <input type="checkbox">
+                                            <span>Thang máy</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Advanced Search -->
+                        </div>
+    
+    
+                        <div class="quick-filters">
+                            <div class="filter-item">
+                                <i class="fas fa-home"></i>
+                                <span>Nhà ở</span>
+                            </div>
+                            <div class="filter-item">
+                                <i class="fas fa-building"></i>
+                                <span>Chung cư</span>
+                            </div>
+                            <div class="filter-item">
+                                <i class="fas fa-store"></i>
+                                <span>Văn phòng</span>
+                            </div>
+                            <div class="filter-item">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <span>Đất nền</span>
+                            </div>
+                            <div class="filter-item">
+                                <i class="fas fa-warehouse"></i>
+                                <span>Kho xưởng</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Welcome Section -->
+            <section class="welcome">
+                <div class="container">
+                    <div class="welcome-content">
+                        <div class="welcome-images">
+                            <img src="./assets/img/welcome_img1.jpg" width="400" height="265" alt="Interior">
+                            <img src="./assets/img/welcome_img2.jpg" width="400" height="265" alt="Living room">
+                            <img src="./assets/img/welcome_img3.jpg" width="400" height="265" alt="Kitchen">
+                            <img src="./assets/img/welcome_img4.jpg" width="400" height="265" alt="Bedroom">
+                        </div>
+                        <div class="welcome-text">
+                            <h2>CHÀO MỪNG BẠN ĐẾN VỚI LocHome</h2>
+                            <h3>Đối tác tin cậy trong hành trình tìm kiếm ngôi nhà mơ ước</h3>
+                            <p>Với hơn 10 năm kinh nghiệm trong lĩnh vực bất động sản, LocHome tự hào là cầu nối đáng tin cậy giữa người mua và người bán. Chúng tôi cam kết mang đến dịch vụ chuyên nghiệp, minh bạch và hiệu quả nhất.</p>
+    
+                            <div class="elementor">
+                                <div class="elementor-content">
+                                    <p class="elementor-title">
+                                        <span>Tầm nhìn</span>
+                                    </p>
+                                    <p class="elementor-description">
+                                        LocHome quyết tâm vươn mình trở thành đơn vị tư vấn mua, bán và đầu tư bất động
+                                        sản uy tín tại Việt Nam
+                                    </p>
+                                </div>
+                                <div class="elementor-content">
+                                    <p class="elementor-title">
+                                        <span>Giá trị cốt lõi</span>
+                                    </p>
+                                    <p class="elementor-description">
+                                        Thế mạnh về nhân sự cũng như kinh nghiệm trên 15 năm kinh nghiệm với hơn 500 bất động sản đã bán thành công
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- <div class="stats">
+                                <div class="stat-item">
+                                    <i class="fas fa-building"></i>
+                                    <div>
+                                        <strong>5000+</strong>
+                                        <span>Dự án</span>
+                                    </div>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="fas fa-users"></i>
+                                    <div>
+                                        <strong>15000+</strong>
+                                        <span>Khách hàng</span>
+                                    </div>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="fas fa-handshake"></i>
+                                    <div>
+                                        <strong>98%</strong>
+                                        <span>Hài lòng</span>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Featured Projects -->
+            <section class="featured-projects">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>DỰ ÁN NỔI BẬT</h2>
+                        <p>Khám phá những dự án bất động sản cao cấp được nhiều người quan tâm nhất</p>
+                    </div>
+    
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="./assets/img/welcome_img1.jpg" alt="Project">
+                                <span class="badge sale">Giảm 15%</span>
+                            </div>
+                            <div class="project-info">
+                                <h3>Biệt thự view sông Thanh Đa</h3>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Bình Thạnh, TP.HCM</p>
+                                <div class="project-features">
+                                    <span><i class="fas fa-bed"></i> 4 PN</span>
+                                    <span><i class="fas fa-bath"></i> 3 WC</span>
+                                    <span><i class="fas fa-ruler-combined"></i> 250m²</span>
+                                </div>
+                                <div class="project-footer">
+                                    <span class="price">12.5 tỷ</span>
+                                    <a href="./properties.html" class="btn-detail">Chi tiết</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="./assets/img/welcome_img2.jpg" alt="Project">
+                                <span class="badge hot">Hot</span>
+                            </div>
+                            <div class="project-info">
+                                <h3>Chung cư cao cấp Q.7</h3>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Quận 7, TP.HCM</p>
+                                <div class="project-features">
+                                    <span><i class="fas fa-bed"></i> 3 PN</span>
+                                    <span><i class="fas fa-bath"></i> 2 WC</span>
+                                    <span><i class="fas fa-ruler-combined"></i> 120m²</span>
+                                </div>
+                                <div class="project-footer">
+                                    <span class="price">5.8 tỷ</span>
+                                    <a href="./properties.html" class="btn-detail">Chi tiết</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="./assets/img/welcome_img3.jpg" alt="Project">
+                                <span class="badge new">Mới</span>
+                            </div>
+                            <div class="project-info">
+                                <h3>Nhà phố thương mại Thủ Đức</h3>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Thủ Đức, TP.HCM</p>
+                                <div class="project-features">
+                                    <span><i class="fas fa-bed"></i> 5 PN</span>
+                                    <span><i class="fas fa-bath"></i> 4 WC</span>
+                                    <span><i class="fas fa-ruler-combined"></i> 180m²</span>
+                                </div>
+                                <div class="project-footer">
+                                    <span class="price">8.2 tỷ</span>
+                                    <a href="./properties.html" class="btn-detail">Chi tiết</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="./assets/img/welcome_img4.jpg" alt="Project">
+                                <span class="badge sale">Giảm 10%</span>
+                            </div>
+                            <div class="project-info">
+                                <h3>Căn hộ duplex Landmark 81</h3>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Bình Thạnh, TP.HCM</p>
+                                <div class="project-features">
+                                    <span><i class="fas fa-bed"></i> 3 PN</span>
+                                    <span><i class="fas fa-bath"></i> 3 WC</span>
+                                    <span><i class="fas fa-ruler-combined"></i> 150m²</span>
+                                </div>
+                                <div class="project-footer">
+                                    <span class="price">9.5 tỷ</span>
+                                    <a href="./properties.html" class="btn-detail">Chi tiết</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="./assets/img/welcome_img5.jpg" alt="Project">
+                                <span class="badge hot">Hot</span>
+                            </div>
+                            <div class="project-info">
+                                <h3>Biệt thự nghỉ dưỡng Đà Lạt</h3>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Đà Lạt, Lâm Đồng</p>
+                                <div class="project-features">
+                                    <span><i class="fas fa-bed"></i> 6 PN</span>
+                                    <span><i class="fas fa-bath"></i> 5 WC</span>
+                                    <span><i class="fas fa-ruler-combined"></i> 350m²</span>
+                                </div>
+                                <div class="project-footer">
+                                    <span class="price">18.5 tỷ</span>
+                                    <a href="./properties.html" class="btn-detail">Chi tiết</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="./assets/img/welcome_img6.jpg" alt="Project">
+                                <span class="badge new">Mới</span>
+                            </div>
+                            <div class="project-info">
+                                <h3>Shophouse mặt tiền Q.2</h3>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Quận 2, TP.HCM</p>
+                                <div class="project-features">
+                                    <span><i class="fas fa-bed"></i> 4 PN</span>
+                                    <span><i class="fas fa-bath"></i> 4 WC</span>
+                                    <span><i class="fas fa-ruler-combined"></i> 200m²</span>
+                                </div>
+                                <div class="project-footer">
+                                    <span class="price">15.8 tỷ</span>
+                                    <a href="./properties.html" class="btn-detail">Chi tiết</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="text-center">
+                        <a href="./properties.html" class="btn-loadmore">Xem thêm</a>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Categories -->
+            <section class="categories">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>CÁC DANH MUC TIÊU BIỂU</h2>
+                        <p>Tìm kiếm bất động sản theo loại hình phù hợp với nhu cầu của bạn</p>
+                    </div>
+    
+                    <div class="categories-grid">
+                        <div class="category-card">
+                            <img src="./assets/img/cate_img1.jfif" alt="Villa">
+                            <div class="category-overlay">
+                                <h3>Biệt thự</h3>
+                                <p>285 dự án</p>
+                            </div>
+                        </div>
+                        <div class="category-card">
+                            <img src="./assets/img/cate_img2.jfif" alt="Apartment">
+                            <div class="category-overlay">
+                                <h3>Chung cư</h3>
+                                <p>542 dự án</p>
+                            </div>
+                        </div>
+                        <div class="category-card">
+                            <img src="./assets/img/cate_img3.jfif" alt="Townhouse">
+                            <div class="category-overlay">
+                                <h3>Nhà phố</h3>
+                                <p>398 dự án</p>
+                            </div>
+                        </div>
+                        <div class="category-card">
+                            <img src="./assets/img/welcome_img4.jpg" alt="Office">
+                            <div class="category-overlay">
+                                <h3>Văn phòng</h3>
+                                <p>156 dự án</p>
+                            </div>
+                        </div>
+                        <div class="category-card">
+                            <img src="./assets/img/welcome_img5.jpg" alt="Resort">
+                            <div class="category-overlay">
+                                <h3>Nghỉ dưỡng</h3>
+                                <p>124 dự án</p>
+                            </div>
+                        </div>
+                        <div class="category-card">
+                            <img src="./assets/img/cate_img6.jfif"" alt="Land">
+                            <div class="category-overlay">
+                                <h3>Đất nền</h3>
+                                <p>432 dự án</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Latest Projects -->
+            <section class="latest-projects">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>CÁC DỰ ÁN MỚI NHẤT</h2>
+                        <p>Cập nhật liên tục các dự án bất động sản mới nhất trên thị trường</p>
+                    </div>
+    
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="./assets/img/project_img1.jpg" alt="Project">
+                                <span class="badge new">Mới</span>
+                            </div>
+                            <div class="project-info">
+                                <h3><a href="./properties.html">Khu đô thị Mizuki Park</a></h3>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Bình Chánh, TP.HCM</p>
+                                <div class="project-features">
+                                    <span><i class="fas fa-bed"></i> 2 PN</span>
+                                    <span><i class="fas fa-bath"></i> 2 WC</span>
+                                    <span><i class="fas fa-ruler-combined"></i> 68m²</span>
+                                </div>
+                                <div class="project-footer">
+                                    <span class="price">2.8 tỷ</span>
+                                    <a href="./properties.html" class="btn-detail">Chi tiết</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="./assets/img/welcome_img2.jpg" alt="Project">
+                                <span class="badge hot">Hot</span>
+                            </div>
+                            <div class="project-info">
+                                <h3><a href="./properties.html">The Vista Verde Q.2</a></h3>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Quận 2, TP.HCM</p>
+                                <div class="project-features">
+                                    <span><i class="fas fa-bed"></i> 3 PN</span>
+                                    <span><i class="fas fa-bath"></i> 2 WC</span>
+                                    <span><i class="fas fa-ruler-combined"></i> 110m²</span>
+                                </div>
+                                <div class="project-footer">
+                                    <span class="price">6.5 tỷ</span>
+                                    <a href="./properties.html" class="btn-detail">Chi tiết</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="./assets/img/welcome_img3.jpg" alt="Project">
+                                <span class="badge sale">Giảm 20%</span>
+                            </div>
+                            <div class="project-info">
+                                <h3><a href="./properties.html">Vinhomes Grand Park</a></h3>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Quận 9, TP.HCM</p>
+                                <div class="project-features">
+                                    <span><i class="fas fa-bed"></i> 2 PN</span>
+                                    <span><i class="fas fa-bath"></i> 2 WC</span>
+                                    <span><i class="fas fa-ruler-combined"></i> 75m²</span>
+                                </div>
+                                <div class="project-footer">
+                                    <span class="price">3.2 tỷ</span>
+                                    <a href="./properties.html" class="btn-detail">Chi tiết</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="./assets/img/welcome_img4.jpg" alt="Project">
+                                <span class="badge new">Mới</span>
+                            </div>
+                            <div class="project-info">
+                                <h3><a href="./properties.html">Masteri Thảo Điền</a></h3>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Quận 2, TP.HCM</p>
+                                <div class="project-features">
+                                    <span><i class="fas fa-bed"></i> 3 PN</span>
+                                    <span><i class="fas fa-bath"></i> 2 WC</span>
+                                    <span><i class="fas fa-ruler-combined"></i> 95m²</span>
+                                </div>
+                                <div class="project-footer">
+                                    <span class="price">7.8 tỷ</span>
+                                    <a href="./properties.html" class="btn-detail">Chi tiết</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="./assets/img/welcome_img5.jpg" alt="Project">
+                                <span class="badge hot">Hot</span>
+                            </div>
+                            <div class="project-info">
+                                <h3><a href="./properties.html">Diamond Island Q.2</a></h3>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Quận 2, TP.HCM</p>
+                                <div class="project-features">
+                                    <span><i class="fas fa-bed"></i> 4 PN</span>
+                                    <span><i class="fas fa-bath"></i> 3 WC</span>
+                                    <span><i class="fas fa-ruler-combined"></i> 180m²</span>
+                                </div>
+                                <div class="project-footer">
+                                    <span class="price">14.5 tỷ</span>
+                                    <a href="./properties.html" class="btn-detail">Chi tiết</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="./assets/img/welcome_img6.jpg" alt="Project">
+                                <span class="badge new">Mới</span>
+                            </div>
+                            <div class="project-info">
+                                <h3><a href="./properties.html">Estella Heights Q.2</a></h3>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Quận 2, TP.HCM</p>
+                                <div class="project-features">
+                                    <span><i class="fas fa-bed"></i> 3 PN</span>
+                                    <span><i class="fas fa-bath"></i> 2 WC</span>
+                                    <span><i class="fas fa-ruler-combined"></i> 130m²</span>
+                                </div>
+                                <div class="project-footer">
+                                    <span class="price">8.5 tỷ</span>
+                                    <a href="./properties.html" class="btn-detail">Chi tiết</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="text-center">
+                        <a href="./properties.html" class="btn-loadmore">Xem thêm</a>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Vision & Mission -->
+            <section class="vision-mission">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-subtitle">LocHome</span>
+                        <h2>TẦM NHÌN VÀ SỨ MỆNH</h2>
+                        <p>Tổng hợp các dự án bất động sản tại Hà Nội, Đà Nẵng, TP Hồ Chí Minh...và cách tính thành khác hot nhất thời điểm hiện tại</p>
+                    </div>
+    
+                    <div class="vision-grid">
+                        <div class="vision-card">
+                            <div class="vision-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h3>Tầm nhìn</h3>
+                            <p>Mona LocHome quyết tâm vươn mình trở thành đơn vị tư vấn mua, bán và đầu tư bất động sản uy tín tại Việt Nam</p>
+                        </div>
+    
+                        <div class="vision-card">
+                            <div class="vision-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <h3>Sứ mệnh</h3>
+                            <p>Sứ mệnh "Bất động sản thật – Giá trị thật" với phương pháp bán nhanh bất động sản trong 30 ngày.</p>
+                        </div>
+    
+                        <div class="vision-card">
+                            <div class="vision-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h3>Giá trị cốt lõi</h3>
+                            <p>Thẻ mạnh về nhân sự cùng nhu kinh nghiệm trên 15 năm kinh nghiệm với hơn 500 bất động sản đã bán thành công</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Statistics -->
+            <section class="statistics">
+                <div class="statistics-overlay">
+                    <div class="container">
+                        <div class="section-header">
+                            <span class="section-subtitle">LocHome</span>
+                            <h2>NHỮNG CON SỐ ÁN TƯỢNG</h2>
+                            <p>Mona LocHome tự hào về những thành tựu đã đạt được trong những năm qua. Dưới đây là một số thành tựu nổi bật:</p>
+                        </div>
+    
+                        <div class="statistics-grid">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-file-contract"></i>
+                                </div>
+                                <h3>15 +</h3>
+                                <p>Năm kinh nghiệm</p>
+                            </div>
+    
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <h3>130 +</h3>
+                                <p>Dự án đã bán</p>
+                            </div>
+    
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-percentage"></i>
+                                </div>
+                                <h3>329 +</h3>
+                                <p>Bất động sản cho thuê</p>
+                            </div>
+    
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-newspaper"></i>
+                                </div>
+                                <h3>10 +</h3>
+                                <p>Giải pháp dự án</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Team -->
+            <section class="team">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>ĐÁNH GIÁ TỪ KHÁCH HÀNG</h2>
+                        <p>Những chia sẻ chân thực từ khách hàng đã sử dụng dịch vụ của chúng tôi</p>
+                    </div>
+    
+                    <div class="team-grid">
+                        <div class="team-card">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200" alt="Customer">
+                            <h3>Anh Tuấn</h3>
+                            <p class="position">Khách hàng tại TP.HCM</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial">"Dịch vụ tuyệt vời! Tôi đã tìm được căn nhà mơ ước chỉ sau 2 tuần. Đội ngũ tư vấn rất chuyên nghiệp và nhiệt tình."</p>
+                        </div>
+    
+                        <div class="team-card">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200" alt="Customer">
+                            <h3>Chị Lan</h3>
+                            <p class="position">Khách hàng tại Hà Nội</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial">"Rất hài lòng với sự hỗ trợ của LocHome. Thủ tục nhanh gọn, minh bạch và đáng tin cậy."</p>
+                        </div>
+    
+                        <div class="team-card">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200" alt="Customer">
+                            <h3>Anh Minh</h3>
+                            <p class="position">Khách hàng tại Đà Nẵng</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial">"Tôi đã mua được biệt thự với giá tốt nhờ sự tư vấn của LocHome. Cảm ơn đội ngũ rất nhiều!"</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- News -->
+            <section class="news">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>TIN TỨC THỊ TRƯỜNG</h2>
+                        <p>Cập nhật những tin tức mới nhất về thị trường bất động sản</p>
+                    </div>
+    
+                    <div class="news-grid">
+                        <div class="news-card">
+                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400" alt="News">
+                            <div class="news-content">
+                                <span class="news-date"><i class="fas fa-calendar"></i> 15/12/2025</span>
+                                <h3>Thị trường BĐS TP.HCM quý 4/2025</h3>
+                                <p>Thị trường bất động sản TP.HCM trong quý 4 năm 2025 đang có những tín hiệu tích cực với nhiều dự án mới được triển khai...</p>
+                                <a href="#" class="read-more">Đọc thêm <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+    
+                        <div class="news-card">
+                            <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=400" alt="News">
+                            <div class="news-content">
+                                <span class="news-date"><i class="fas fa-calendar"></i> 12/12/2025</span>
+                                <h3>Xu hướng đầu tư BĐS năm 2026</h3>
+                                <p>Các chuyên gia nhận định năm 2026 sẽ là thời điểm vàng để đầu tư vào bất động sản với nhiều cơ hội hấp dẫn...</p>
+                                <a href="#" class="read-more">Đọc thêm <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+    
+                        <div class="news-card">
+                            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400" alt="News">
+                            <div class="news-content">
+                                <span class="news-date"><i class="fas fa-calendar"></i> 10/12/2025</span>
+                                <h3>Chính sách mới về nhà ở xã hội</h3>
+                                <p>Chính phủ vừa ban hành chính sách mới nhằm hỗ trợ người dân mua nhà ở xã hội với lãi suất ưu đãi...</p>
+                                <a href="#" class="read-more">Đọc thêm <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="text-center">
+                        <button class="btn-loadmore">Xem thêm tin tức</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-col">
+                        <div class="logo"><img src="./assets/img/ft_logo.png" width="177" height="142" alt="LocHome"></div>
+                        <p>Đối tác tin cậy trong hành trình tìm kiếm ngôi nhà mơ ước của bạn.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+    
+                    <div class="footer-col">
+                        <h4>Về chúng tôi</h4>
+                        <ul>
+                            <li><a href="./about.html">Giới thiệu</a></li>
+                            <li><a href="./properties.html">Dự án</a></li>
+                            <li><a href="#">Tin tức</a></li>
+                            <li><a href="./contact.html">Liên hệ</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer-col">
+                        <h4>Hỗ trợ</h4>
+                        <ul>
+                            <li><a href="#">Hướng dẫn</a></li>
+                            <li><a href="#">Câu hỏi thường gặp</a></li>
+                            <li><a href="#">Chính sách bảo mật</a></li>
+                            <li><a href="#">Điều khoản sử dụng</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer-col">
+                        <h4>Liên hệ</h4>
+                        <ul class="contact-info">
+                            <li><i class="fas fa-map-marker-alt"></i>123 Đường ABC, Quận 1, TP.HCM</li>
+                            <li><i class="fas fa-phone"></i> <a href="tel:+84123456789">+84 123 456 789</a></li>
+                            <li><i class="fas fa-envelope"></i>contact@LocHome.vn</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="footer-bottom">
+                    <p>&copy; 2025 LocHome. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
