@@ -1,561 +1,1221 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dự án BĐS - PrimeLuxe</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <div id="wrapper">
-        <!-- Header -->
-        <header class="header">
-            <div class="top-bar">
-                <div class="container">
-                    <div class="top-bar-content">
-                        <div class="contact-info">
-                            <span><i class="fas fa-phone"></i> Hotline: <a href="tel:+84123456789">+84 123 456 789</a></span>
-                            <span><i class="fas fa-envelope"></i> contact@LocHome.vn</span>
-                        </div>
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <nav class="navbar">
-                <div class="container">
-                    <div class="nav-wrapper">
-                        <div class="logo">
-                            <img src="./assets/img/logo.png" width="200" height="53" alt="LocHome">
-                        </div>
-                        <ul class="nav-menu">
-                            <li><a href="./">Trang chủ</a></li>
-                            <li><a href="./about.html">Giới thiệu</a></li>
-                            <li><a href="./properties.html" class="active">Dự án</a></li>
-                            <li><a href="#">Tin tức</a></li>
-                            <li><a href="./contact.html">Liên hệ</a></li>
-                            <li> <a href="tel:+84123456789" class="btn-primary">Tư vấn</a></li>
-                        </ul>
-                        <a href="tel:+84123456789" class="btn-primary">Tư vấn</a>
-                        <div class="mobile-menu-toggle">
-                            <i class="fas fa-bars"></i>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dự án BĐS - PrimeLuxe</title>
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=Roboto:wght@300;400;500;700&display=swap"
+            rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    </head>
+    <body>
+        <div id="wrapper">
+            <!-- Header -->
+            <header class="header">
+                <div class="top-bar">
+                    <div class="container">
+                        <div class="top-bar-content">
+                            <div class="contact-info">
+                                <span>
+                                    <i class="fas fa-phone"></i>
+                                    Hotline:
+                                    <a href="tel:0327556776">0327 556 776</a>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </nav>
-        </header>
-    
-        <main>
-            <!-- Properties Hero Search -->
-            <section class="properties-hero">
-                <div class="container">
-                    <div class="search-box">
-                        <div class="search-box-frame">
-                            <input type="text" placeholder="Tìm kiếm bất động sản...">
-                            <select class="search-select">
-                                <option>Chọn trang thái</option>
-                                <option>Mua bán</option>
-                                <option>Cho thuê</option>
-                            </select>
-                            <select class="search-select">
-                                <option>Loại nhà đất</option>
-                                <option>Nhà ở</option>
-                                <option>Chung cư</option>
-                                <option>Văn phòng</option>
-                                <option>Đất nền</option>
-                            </select>
-                            <button class="btn-settings"><i class="fas fa-cog"></i></button>
-                            <button class="btn-search">Tìm kiếm</button>
+                <nav class="navbar">
+                    <div class="container">
+                        <div class="nav-wrapper">
+                            <div class="logo">
+                                <img src="./assets/img/logo.png" width="200" height="53" alt="LocHome" />
+                            </div>
+                            <ul class="nav-menu">
+                                <li><a href="./">Trang chủ</a></li>
+                                <li><a href="./about.html">Giới thiệu</a></li>
+                                <li><a href="./properties.html" class="active">Sản phẩm</a></li>
+                                <li><a href="#">Tin tức</a></li>
+                                <li><a href="./contact.html">Liên hệ</a></li>
+                                <li><a href="tel:0327556776" class="btn-primary">Tư vấn</a></li>
+                            </ul>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#">Zalo</a>
+                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                            </div>
+                            <div class="mobile-menu-toggle">
+                                <i class="fas fa-bars"></i>
+                            </div>
                         </div>
+                    </div>
+                </nav>
+            </header>
+
+            <main>
+                <!-- Properties Hero Search -->
+                <section class="properties-hero">
+                    <div class="container">
                         <!-- Advanced Search Dropdown -->
                         <div class="advanced-search">
                             <div class="advanced-search-grid">
                                 <select class="advanced-select">
-                                    <option>Tỉnh/ Thành phố</option>
+                                    <option>Chọn tỉnh/ thành phố</option>
                                     <option>TP. Hồ Chí Minh</option>
                                     <option>Hà Nội</option>
                                     <option>Đà Nẵng</option>
                                     <option>Cần Thơ</option>
                                 </select>
-                                <input type="text" class="advanced-input" placeholder="Diện tích nhỏ nhất (m²)">
-                                <input type="text" class="advanced-input" placeholder="Diện tích lớn nhất (m²)">
+                                <select class="advanced-select">
+                                    <option>Chọn quận</option>
+                                    <option>Quận 1</option>
+                                    <option>Quận 2</option>
+                                </select>
+                                <select class="advanced-select">
+                                    <option>Chọn phường</option>
+                                    <option>Phường 1</option>
+                                    <option>Phường 2</option>
+                                </select>
+                            </div>
+                            <div class="advanced-search-grid grid-4">
+                                <select class="advanced-select">
+                                    <option>Chọn phòng trọ / căn hộ</option>
+                                    <option>Phòng trọ</option>
+                                    <option>Căn hộ</option>
+                                </select>
+                                <select class="advanced-select">
+                                    <option>Chọn mặt bằng / nhà nguyên căn</option>
+                                    <option>Mặt bằng</option>
+                                    <option>Nhà nguyên căn</option>
+                                </select>
+                                <select class="advanced-select">
+                                    <option>Chọn ký túc xá</option>
+                                    <option>Ký túc xá</option>
+                                </select>
+                                <select class="advanced-select">
+                                    <option>Chọn sleepbox</option>
+                                    <option>Sleepbox</option>
+                                </select>
                             </div>
                             <div class="advanced-search-grid">
-                                <input type="text" class="advanced-input" placeholder="Phòng ngủ">
-                                <input type="text" class="advanced-input" placeholder="Phòng tắm">
-                                <input type="text" class="advanced-input" placeholder="Bãi đậu xe">
-                            </div>
-                            <div class="price-range">
-                                <label>Khoảng giá: <span class="price-value">0đ - 100.000.000.000đ</span></label>
-                                <div class="range-slider">
-                                    <input type="range" min="0" max="100000000000" value="0" class="range-min">
-                                    <input type="range" min="0" max="100000000000" value="100000000000" class="range-max">
-                                </div>
-                            </div>
-                            <div class="amenities-section">
-                                <label>Tiện nghi</label>
-                                <div class="amenities-grid">
-                                    <label class="amenity-item">
-                                        <input type="checkbox">
-                                        <span>Bảo vệ 24/7</span>
-                                    </label>
-                                    <label class="amenity-item">
-                                        <input type="checkbox">
-                                        <span>Bể bơi</span>
-                                    </label>
-                                    <label class="amenity-item">
-                                        <input type="checkbox">
-                                        <span>Bình nóng lạnh</span>
-                                    </label>
-                                    <label class="amenity-item">
-                                        <input type="checkbox">
-                                        <span>Camera an ninh</span>
-                                    </label>
-                                    <label class="amenity-item">
-                                        <input type="checkbox">
-                                        <span>Internet tốc độ cao</span>
-                                    </label>
-                                    <label class="amenity-item">
-                                        <input type="checkbox">
-                                        <span>Nhà bếp</span>
-                                    </label>
-                                    <label class="amenity-item">
-                                        <input type="checkbox">
-                                        <span>Nội thất đầy đủ</span>
-                                    </label>
-                                    <label class="amenity-item">
-                                        <input type="checkbox">
-                                        <span>Thang máy</span>
-                                    </label>
-                                </div>
+                                <button class="filter-btn open-modal" data-modal="price">
+                                    Giá
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <button class="filter-btn open-modal" data-modal="amenities">
+                                    Tiện ích
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <button class="filter-btn">Áp dụng</button>
                             </div>
                         </div>
                         <!-- End Advanced Search -->
-                    </div>
-                </div>
-            </section>
-    
-            <!-- Properties Content -->
-            <section class="properties-content">
-                <div class="container">
-                    <div class="properties-layout">
-                        <!-- Main Content -->
-                        <div class="properties-main">
-                            <!-- Filter Bar -->
-                            <div class="filter-bar">
-                                <div class="view-toggle">
-                                    <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
-                                    <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
-                                </div>
-                                <div class="sort-options">
-                                    <label>Mặc định</label>
-                                    <select>
-                                        <option>Mặc định</option>
-                                        <option>Giá tăng dần</option>
-                                        <option>Giá giảm dần</option>
-                                        <option>Mới nhất</option>
-                                        <option>Cũ nhất</option>
-                                    </select>
-                                </div>
-                            </div>
-    
-                            <!-- Properties Grid -->
-                            <div class="properties-grid">
-                                <!-- Property Card 1 -->
-                                <div class="property-card">
-                                    <div class="property-image">
-                                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400" alt="Property">
-                                        <div class="property-badges">
-                                            <span class="badge sale">Giảm 15%</span>
-                                            <span class="badge new">Mới nhất</span>
-                                        </div>
-                                    </div>
-                                    <div class="property-info">
-                                        <a href="./detail.html" class="link_full"></a>
-                                        <h3>Nhà mặt phố Tôn Đức Thắng</h3>
-                                        <p class="location"><i class="fas fa-map-marker-alt"></i> Q.1, Nguyễn Mạng Tháng 8, P.1</p>
-                                        <div class="property-meta">
-                                            <span><i class="fas fa-bed"></i> Phòng ngủ: 4</span>
-                                            <span><i class="fas fa-bath"></i> Phòng tắm: 2</span>
-                                            <span class="full-width"><i class="fas fa-ruler-combined"></i> Diện tích: 340 m²</span>
-                                        </div>
-                                        <div class="property-footer">
-                                            <span class="price">15.000.000.000 đ</span>
-                                            <span class="date"><i class="far fa-calendar"></i> 16/09/2024</span>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <!-- Property Card 2 -->
-                                <div class="property-card">
-                                    <div class="property-image">
-                                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400" alt="Property">
-                                        <div class="property-badges">
-                                            <span class="badge hot">Hot</span>
-                                            <span class="badge sale-tag">Giảm giá</span>
-                                        </div>
-                                    </div>
-                                    <div class="property-info">
-                                        <a href="./detail.html" class="link_full"></a>
-                                        <h3>Nhà mặt phố Quận 2</h3>
-                                        <p class="location"><i class="fas fa-map-marker-alt"></i> Q.2, TP.HCM</p>
-                                        <div class="property-meta">
-                                            <span><i class="fas fa-bed"></i> Phòng ngủ: 4</span>
-                                            <span><i class="fas fa-bath"></i> Phòng tắm: 2</span>
-                                            <span class="full-width"><i class="fas fa-ruler-combined"></i> Diện tích: 6,000 m²</span>
-                                        </div>
-                                        <div class="property-footer">
-                                            <span class="price">25.400.000.000 đ</span>
-                                            <span class="date"><i class="far fa-calendar"></i> 10/09/2024</span>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <!-- Property Card 3 -->
-                                <div class="property-card">
-                                    <div class="property-image">
-                                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400" alt="Property">
-                                        <div class="property-badges">
-                                            <span class="badge new">Mới nhất</span>
-                                            <span class="badge sale">Giảm 20%</span>
-                                        </div>
-                                    </div>
-                                    <div class="property-info">
-                                        <a href="./detail.html" class="link_full"></a>
-                                        <h3>Biệt thự Premier Luxury Kiều Phúc</h3>
-                                        <p class="location"><i class="fas fa-map-marker-alt"></i> Cầu Vĩnh An</p>
-                                        <div class="property-meta">
-                                            <span><i class="fas fa-bed"></i> Phòng ngủ: 2</span>
-                                            <span><i class="fas fa-bath"></i> Phòng tắm: 1</span>
-                                            <span class="full-width"><i class="fas fa-ruler-combined"></i> Diện tích: 120 m²</span>
-                                        </div>
-                                        <div class="property-footer">
-                                            <span class="price">25.480.000.000 đ</span>
-                                            <span class="date"><i class="far fa-calendar"></i> 18/09/2024</span>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <!-- Property Card 4 -->
-                                <div class="property-card">
-                                    <div class="property-image">
-                                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400" alt="Property">
-                                        <div class="property-badges">
-                                            <span class="badge sale">Giảm 15%</span>
-                                            <span class="badge new">Mới nhất</span>
-                                        </div>
-                                    </div>
-                                    <div class="property-info">
-                                        <a href="./detail.html" class="link_full"></a>
-                                        <h3>Cho thuê căn hộ Thủ Đức</h3>
-                                        <p class="location"><i class="fas fa-map-marker-alt"></i> 11 S.G. 6wả</p>
-                                        <div class="property-meta">
-                                            <span><i class="fas fa-bed"></i> Phòng ngủ: 4</span>
-                                            <span><i class="fas fa-bath"></i> Phòng tắm: 2</span>
-                                            <span class="full-width"><i class="fas fa-ruler-combined"></i> Diện tích: 149 m²</span>
-                                        </div>
-                                        <div class="property-footer">
-                                            <span class="price">3.500.000.000 đ</span>
-                                            <span class="date"><i class="far fa-calendar"></i> 16/09/2024</span>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <!-- Property Card 5 -->
-                                <div class="property-card">
-                                    <div class="property-image">
-                                        <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=400" alt="Property">
-                                        <div class="property-badges">
-                                            <span class="badge hot">Hot</span>
-                                            <span class="badge new">Mới nhất</span>
-                                        </div>
-                                    </div>
-                                    <div class="property-info">
-                                        <a href="./detail.html" class="link_full"></a>
-                                        <h3>Căn hộ cao cấp gần Hồ Tây</h3>
-                                        <p class="location"><i class="fas fa-map-marker-alt"></i> Q16, P. 6w 6wả</p>
-                                        <div class="property-meta">
-                                            <span><i class="fas fa-bed"></i> Phòng ngủ: 5</span>
-                                            <span><i class="fas fa-bath"></i> Phòng tắm: 3</span>
-                                            <span class="full-width"><i class="fas fa-ruler-combined"></i> Diện tích: 229 m²</span>
-                                        </div>
-                                        <div class="property-footer">
-                                            <span class="price">37.500.000.000 đ</span>
-                                            <span class="date"><i class="far fa-calendar"></i> 14/09/2024</span>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <!-- Property Card 6 -->
-                                <div class="property-card">
-                                    <div class="property-image">
-                                        <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=400" alt="Property">
-                                        <div class="property-badges">
-                                            <span class="badge sale">Giảm giá</span>
-                                            <span class="badge new">Mới nhất</span>
-                                        </div>
-                                    </div>
-                                    <div class="property-info">
-                                        <a href="./detail.html" class="link_full"></a>
-                                        <h3>Biệt thự sân vườn căn gần sân bay</h3>
-                                        <p class="location"><i class="fas fa-map-marker-alt"></i> Việt Nam</p>
-                                        <div class="property-meta">
-                                            <span><i class="fas fa-bed"></i> Phòng ngủ: 3</span>
-                                            <span><i class="fas fa-bath"></i> Phòng tắm: 1</span>
-                                            <span class="full-width"><i class="fas fa-ruler-combined"></i> Diện tích: 160 m²</span>
-                                        </div>
-                                        <div class="property-footer">
-                                            <span class="price">70.000.000.000 đ</span>
-                                            <span class="date"><i class="far fa-calendar"></i> 16/09/2024</span>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <!-- Property Card 7 -->
-                                <div class="property-card">
-                                    <div class="property-image">
-                                        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400" alt="Property">
-                                        <div class="property-badges">
-                                            <span class="badge sale">Giảm 15%</span>
-                                            <span class="badge new">Mới nhất</span>
-                                        </div>
-                                    </div>
-                                    <div class="property-info">
-                                        <a href="./detail.html" class="link_full"></a>
-                                        <h3>Chung cư Family House</h3>
-                                        <p class="location"><i class="fas fa-map-marker-alt"></i> 12 Southwest</p>
-                                        <div class="property-meta">
-                                            <span><i class="fas fa-bed"></i> Phòng ngủ: 6</span>
-                                            <span><i class="fas fa-bath"></i> Phòng tắm: 5</span>
-                                            <span class="full-width"><i class="fas fa-ruler-combined"></i> Diện tích: 329 m²</span>
-                                        </div>
-                                        <div class="property-footer">
-                                            <span class="price">78.200.000.000 đ</span>
-                                            <span class="date"><i class="far fa-calendar"></i> 18/09/2024</span>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <!-- Property Card 8 -->
-                                <div class="property-card">
-                                    <div class="property-image">
-                                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400" alt="Property">
-                                        <div class="property-badges">
-                                            <span class="badge hot">Hot</span>
-                                            <span class="badge new">Mới nhất</span>
-                                        </div>
-                                    </div>
-                                    <div class="property-info">
-                                        <a href="./detail.html" class="link_full"></a>
-                                        <h3>Biệt thự hiện đại N03</h3>
-                                        <p class="location"><i class="fas fa-map-marker-alt"></i> Xuất Way</p>
-                                        <div class="property-meta">
-                                            <span><i class="fas fa-bed"></i> Phòng ngủ: 2</span>
-                                            <span><i class="fas fa-bath"></i> Phòng tắm: 1</span>
-                                            <span class="full-width"><i class="fas fa-ruler-combined"></i> Diện tích: 120 m²</span>
-                                        </div>
-                                        <div class="property-footer">
-                                            <span class="price">15.000.000.000 đ</span>
-                                            <span class="date"><i class="far fa-calendar"></i> 16/09/2024</span>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <!-- Property Card 9 -->
-                                <div class="property-card">
-                                    <div class="property-image">
-                                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=400" alt="Property">
-                                        <div class="property-badges">
-                                            <span class="badge sale">Giảm 15%</span>
-                                            <span class="badge new">Mới nhất</span>
-                                        </div>
-                                    </div>
-                                    <div class="property-info">
-                                        <a href="./detail.html" class="link_full"></a>
-                                        <h3>Cho thuê căn hộ Star</h3>
-                                        <p class="location"><i class="fas fa-map-marker-alt"></i> D Cap, Mbê Sài East</p>
-                                        <div class="property-meta">
-                                            <span><i class="fas fa-bed"></i> Phòng ngủ: 3</span>
-                                            <span><i class="fas fa-bath"></i> Phòng tắm: 4</span>
-                                            <span class="full-width"><i class="fas fa-ruler-combined"></i> Diện tích: 363 m²</span>
-                                        </div>
-                                        <div class="property-footer">
-                                            <span class="price">5.487.960.000 đ</span>
-                                            <span class="date"><i class="far fa-calendar"></i> 18/09/2024</span>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <!-- Property Card 10 -->
-                                <div class="property-card">
-                                    <div class="property-image">
-                                        <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=400" alt="Property">
-                                        <div class="property-badges">
-                                            <span class="badge hot">Hot</span>
-                                            <span class="badge new">Mới nhất</span>
-                                        </div>
-                                    </div>
-                                    <div class="property-info">
-                                        <a href="./detail.html" class="link_full"></a>
-                                        <h3>Cho thuê chung cư Riverside</h3>
-                                        <p class="location"><i class="fas fa-map-marker-alt"></i> 43 Hanover, Cedar Vale</p>
-                                        <div class="property-meta">
-                                            <span><i class="fas fa-bed"></i> Phòng ngủ: 3</span>
-                                            <span><i class="fas fa-bath"></i> Phòng tắm: 2</span>
-                                            <span class="full-width"><i class="fas fa-ruler-combined"></i> Diện tích: 440 m²</span>
-                                        </div>
-                                        <div class="property-footer">
-                                            <span class="price">1.500.000.000 đ</span>
-                                            <span class="date"><i class="far fa-calendar"></i> 18/09/2024</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <!-- Pagination -->
-                            <div class="pagination">
-                                <button class="page-btn active">1</button>
-                                <button class="page-btn">2</button>
-                                <button class="page-btn">3</button>
-                                <button class="page-btn next"><i class="fas fa-chevron-right"></i></button>
-                            </div>
-                        </div>
-    
-                        <!-- Sidebar -->
-                        <aside class="properties-sidebar">
-                            <div class="sidebar-sticky">
-                                <!-- Popular Properties -->
-                                <div class="sidebar-widget">
-                                    <h3>Bất động sản phổ biến</h3>
-                                    <div class="popular-properties">
-                                        <div class="popular-item">
-                                            <a href="./detail.html" class="link_full"></a>
-                                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=100" alt="Property">
-                                            <div class="popular-info">
-                                                <h4>Nhà mặt phố Quận Tân Bình</h4>
-                                                <p class="location"><i class="fas fa-map-marker-alt"></i> 1, Sai At, Montecillo County</p>
-                                                <span class="price">5.000.000.000 đ</span>
-                                            </div>
-                                        </div>
-    
-                                        <div class="popular-item">
-                                            <a href="./detail.html" class="link_full"></a>
-                                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=100" alt="Property">
-                                            <div class="popular-info">
-                                                <h4>Cho thuê biệt thự cao cấp Cdt</h4>
-                                                <p class="location"><i class="fas fa-map-marker-alt"></i> 2367, Karier Street</p>
-                                                <span class="price">6.000.000.000 đ</span>
-                                            </div>
-                                        </div>
-    
-                                        <div class="popular-item">
-                                            <a href="./detail.html" class="link_full"></a>
-                                            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=100" alt="Property">
-                                            <div class="popular-info">
-                                                <h4>Bán nhà mặt tiền Quận 5</h4>
-                                                <p class="location"><i class="fas fa-map-marker-alt"></i> 1, E-D, Bình Thạnh, Tháng 8, P.1</p>
-                                                <span class="price">8.500.000.000 đ</span>
-                                            </div>
-                                        </div>
-    
-                                        <div class="popular-item">
-                                            <a href="./detail.html" class="link_full"></a>
-                                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=100" alt="Property">
-                                            <div class="popular-info">
-                                                <h4>Nhà mặt phố Quận 1</h4>
-                                                <p class="location"><i class="fas fa-map-marker-alt"></i> 1-A, D-Q, Bình Đào S3</p>
-                                                <span class="price">2.400.000.000 đ</span>
-                                            </div>
-                                        </div>
-    
-                                        <div class="popular-item">
-                                            <a href="./detail.html" class="link_full"></a>
-                                            <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=100" alt="Property">
-                                            <div class="popular-info">
-                                                <h4>Cho thuê căn hộ Skyview</h4>
-                                                <p class="location"><i class="fas fa-map-marker-alt"></i> 16-87, Centre Street</p>
-                                                <span class="price">6.000.000.000 đ</span>
-                                            </div>
-                                        </div>
-    
-                                        <div class="popular-item">
-                                            <a href="./detail.html" class="link_full"></a>
-                                            <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=100" alt="Property">
-                                            <div class="popular-info">
-                                                <h4>Nhà mặt phố Quận 1</h4>
-                                                <p class="location"><i class="fas fa-map-marker-alt"></i> 1-A, D-Q, Bình Đào S3</p>
-                                                <span class="price">7.600.000.000 đ</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </aside>
-                    </div>
-                </div>
-            </section>
-        </main>
-    
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-col">
-                        <div class="logo"><img src="./assets/img/ft_logo.png" width="177" height="142" alt="LocHome"></div>
-                        <p>Đối tác tin cậy trong hành trình tìm kiếm ngôi nhà mơ ước của bạn.</p>
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-    
-                    <div class="footer-col">
-                        <h4>Về chúng tôi</h4>
-                        <ul>
-                            <li><a href="./about.html">Giới thiệu</a></li>
-                            <li><a href="./properties.html">Dự án</a></li>
-                            <li><a href="#">Tin tức</a></li>
-                            <li><a href="./contact.html">Liên hệ</a></li>
-                        </ul>
-                    </div>
-    
-                    <div class="footer-col">
-                        <h4>Hỗ trợ</h4>
-                        <ul>
-                            <li><a href="#">Hướng dẫn</a></li>
-                            <li><a href="#">Câu hỏi thường gặp</a></li>
-                            <li><a href="#">Chính sách bảo mật</a></li>
-                            <li><a href="#">Điều khoản sử dụng</a></li>
-                        </ul>
-                    </div>
-    
-                    <div class="footer-col">
-                        <h4>Liên hệ</h4>
-                        <ul class="contact-info">
-                            <li><i class="fas fa-map-marker-alt"></i>123 Đường ABC, Quận 1, TP.HCM</li>
-                            <li><i class="fas fa-phone"></i> <a href="tel:+84123456789">+84 123 456 789</a></li>
-                            <li><i class="fas fa-envelope"></i>contact@LocHome.vn</li>
-                        </ul>
-                    </div>
-                </div>
-    
-                <div class="footer-bottom">
-                    <p>&copy; 2025 LocHome. All rights reserved.</p>
-                </div>
-            </div>
-        </footer>
-    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./assets/js/main.js"></script>
-</body>
+                        <!-- Price Modal -->
+                        <div class="modal-overlay" id="priceModal">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3>Giá (Bỏ chọn để xem tất cả)</h3>
+                                    <button class="modal-close"><i class="fas fa-times"></i></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="price-options">
+                                        <button class="price-option">< 1 Triệu</button>
+                                        <button class="price-option">1 - 2 triệu</button>
+                                        <button class="price-option">2 - 3 triệu</button>
+                                        <button class="price-option">3 - 5 triệu</button>
+                                        <button class="price-option">5 - 8 triệu</button>
+                                        <button class="price-option">8 - 10 triệu</button>
+                                        <button class="price-option">10 - 15 triệu</button>
+                                        <button class="price-option">15 - 20 triệu</button>
+                                        <button class="price-option">> 20 triệu</button>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn-modal-submit">Áp dụng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Amenities Modal -->
+                        <div class="modal-overlay" id="amenitiesModal">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3>Tiện ích khác (Bỏ chọn để xem tất cả)</h3>
+                                    <button class="modal-close"><i class="fas fa-times"></i></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="amenities-options">
+                                        <button class="amenity-option">Có gác xép</button>
+                                        <button class="amenity-option">Không chung chủ</button>
+                                        <button class="amenity-option">Nhà trống</button>
+                                        <button class="amenity-option">Cửa sổ</button>
+                                        <button class="amenity-option">Không gian</button>
+                                        <button class="amenity-option">Có ban công</button>
+                                        <button class="amenity-option">Có tủ lạnh</button>
+                                        <button class="amenity-option">Máy giặt chung</button>
+                                        <button class="amenity-option">Giá rẻ</button>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn-modal-submit">Áp dụng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Properties Content -->
+                <section class="properties-content">
+                    <div class="container">
+                        <div class="properties-layout">
+                            <!-- Main Content -->
+                            <div class="properties-main">
+                                <!-- Filter Bar -->
+                                <div class="filter-bar">
+                                    <div class="view-toggle">
+                                        <button class="view-btn active" data-view="grid">
+                                            <i class="fas fa-th"></i>
+                                        </button>
+                                        <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+                                    </div>
+                                    <div class="sort-options">
+                                        <label>Mặc định</label>
+                                        <select>
+                                            <option>Mặc định</option>
+                                            <option>Giá tăng dần</option>
+                                            <option>Giá giảm dần</option>
+                                            <option>Mới nhất</option>
+                                            <option>Cũ nhất</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Properties Grid -->
+                                <div class="projects-grid">
+                                    <div class="project-card">
+                                        <div class="project-image">
+                                            <a href="./detail.html" class="link_full"></a>
+                                            <img src="./assets/img/welcome_img1.jpg" alt="Project" />
+                                            <span class="badge sale">Giảm 15%</span>
+                                        </div>
+                                        <div class="project-info">
+                                            <h3>
+                                                <span>Xác thực</span>
+                                                <a href="./detail.html">Biệt thự view sông Thanh Đa</a>
+                                            </h3>
+                                            <div class="cnt">
+                                                <div class="row-grid row1">
+                                                    <p>Giá: 4tr</p>
+                                                    <p>Diện tích: 30m2</p>
+                                                    <p>Vị trí: Tầng 2</p>
+                                                </div>
+                                                <div class="row-grid row2">
+                                                    <p>
+                                                        Địa chỉ:
+                                                        <a href="#"><i class="fa-regular fa-map"></i></a>
+                                                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                                                    </p>
+                                                    <p class="services open-modal" data-modal="services">
+                                                        Xem phí dịch vụ
+                                                    </p>
+                                                </div>
+                                                <div class="row-grid row3">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    Gác:
+                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Cừa sổ:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Ban công:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Máy lạnh:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Tủ lạnh:
+                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Tủ quẩn áo:
+                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Giường:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Nệm:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Nước nóng:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Máy giặt:
+                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Chỗ phơi đồ:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Thang máy:
+                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Cho nuôi pet:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Nhận xe điện:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Không chung chủ:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="row-grid row4">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td colspan="2">
+                                                                    <p
+                                                                        class="furniture-prices open-modal"
+                                                                        data-modal="furniture">
+                                                                        Bảng giá thêm nội thất
+                                                                        <i class="fa-solid fa-arrow-right"></i>
+                                                                    </p>
+                                                                </td>
+                                                                <td>
+                                                                    <p
+                                                                        class="calendar open-modal"
+                                                                        data-modal="bookingModal">
+                                                                        Hẹn xem
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="project-card">
+                                        <div class="project-image">
+                                            <a href="./detail.html" class="link_full"></a>
+                                            <img src="./assets/img/welcome_img2.jpg" alt="Project" />
+                                            <span class="badge hot">Hot</span>
+                                        </div>
+                                        <div class="project-info">
+                                            <h3>
+                                                <span>Xác thực</span>
+                                                <a href="./detail.html">Biệt thự view sông Thanh Đa</a>
+                                            </h3>
+                                            <div class="cnt">
+                                                <div class="row-grid row1">
+                                                    <p>Giá: 4tr</p>
+                                                    <p>Diện tích: 30m2</p>
+                                                    <p>Vị trí: Tầng 2</p>
+                                                </div>
+                                                <div class="row-grid row2">
+                                                    <p>
+                                                        Địa chỉ:
+                                                        <a href="#"><i class="fa-regular fa-map"></i></a>
+                                                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                                                    </p>
+                                                    <p class="services open-modal" data-modal="services">
+                                                        Xem phí dịch vụ
+                                                    </p>
+                                                </div>
+                                                <div class="row-grid row3">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    Gác:
+                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Cừa sổ:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Ban công:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Máy lạnh:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Tủ lạnh:
+                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Tủ quẩn áo:
+                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Giường:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Nệm:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Nước nóng:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Máy giặt:
+                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Chỗ phơi đồ:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Thang máy:
+                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Cho nuôi pet:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Nhận xe điện:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Không chung chủ:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="row-grid row4">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td colspan="2">
+                                                                    <p
+                                                                        class="furniture-prices open-modal"
+                                                                        data-modal="furniture">
+                                                                        Bảng giá thêm nội thất
+                                                                        <i class="fa-solid fa-arrow-right"></i>
+                                                                    </p>
+                                                                </td>
+                                                                <td>
+                                                                    <p
+                                                                        class="calendar open-modal"
+                                                                        data-modal="bookingModal">
+                                                                        Hẹn xem
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="project-card">
+                                        <div class="project-image">
+                                            <a href="./detail.html" class="link_full"></a>
+                                            <img src="./assets/img/welcome_img3.jpg" alt="Project" />
+                                            <span class="badge new">Mới</span>
+                                        </div>
+                                        <div class="project-info">
+                                            <h3>
+                                                <span>Xác thực</span>
+                                                <a href="./detail.html">Biệt thự view sông Thanh Đa</a>
+                                            </h3>
+                                            <div class="cnt">
+                                                <div class="row-grid row1">
+                                                    <p>Giá: 4tr</p>
+                                                    <p>Diện tích: 30m2</p>
+                                                    <p>Vị trí: Tầng 2</p>
+                                                </div>
+                                                <div class="row-grid row2">
+                                                    <p>
+                                                        Địa chỉ:
+                                                        <a href="#"><i class="fa-regular fa-map"></i></a>
+                                                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                                                    </p>
+                                                    <p class="services open-modal" data-modal="services">
+                                                        Xem phí dịch vụ
+                                                    </p>
+                                                </div>
+                                                <div class="row-grid row3">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    Gác:
+                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Cừa sổ:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Ban công:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Máy lạnh:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Tủ lạnh:
+                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Tủ quẩn áo:
+                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Giường:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Nệm:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Nước nóng:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Máy giặt:
+                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Chỗ phơi đồ:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Thang máy:
+                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Cho nuôi pet:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Nhận xe điện:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Không chung chủ:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="row-grid row4">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td colspan="2">
+                                                                    <p
+                                                                        class="furniture-prices open-modal"
+                                                                        data-modal="furniture">
+                                                                        Bảng giá thêm nội thất
+                                                                        <i class="fa-solid fa-arrow-right"></i>
+                                                                    </p>
+                                                                </td>
+                                                                <td>
+                                                                    <p
+                                                                        class="calendar open-modal"
+                                                                        data-modal="bookingModal">
+                                                                        Hẹn xem
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="project-card">
+                                        <div class="project-image">
+                                            <a href="./detail.html" class="link_full"></a>
+                                            <img src="./assets/img/welcome_img4.jpg" alt="Project" />
+                                            <span class="badge sale">Giảm 10%</span>
+                                        </div>
+                                        <div class="project-info">
+                                            <h3>
+                                                <span>Xác thực</span>
+                                                <a href="./detail.html">Biệt thự view sông Thanh Đa</a>
+                                            </h3>
+                                            <div class="cnt">
+                                                <div class="row-grid row1">
+                                                    <p>Giá: 4tr</p>
+                                                    <p>Diện tích: 30m2</p>
+                                                    <p>Vị trí: Tầng 2</p>
+                                                </div>
+                                                <div class="row-grid row2">
+                                                    <p>
+                                                        Địa chỉ:
+                                                        <a href="#"><i class="fa-regular fa-map"></i></a>
+                                                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                                                    </p>
+                                                    <p class="services open-modal" data-modal="services">
+                                                        Xem phí dịch vụ
+                                                    </p>
+                                                </div>
+                                                <div class="row-grid row3">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    Gác:
+                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Cừa sổ:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Ban công:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Máy lạnh:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Tủ lạnh:
+                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Tủ quẩn áo:
+                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Giường:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Nệm:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Nước nóng:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Máy giặt:
+                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Chỗ phơi đồ:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Thang máy:
+                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Cho nuôi pet:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Nhận xe điện:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Không chung chủ:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="row-grid row4">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td colspan="2">
+                                                                    <p
+                                                                        class="furniture-prices open-modal"
+                                                                        data-modal="furniture">
+                                                                        Bảng giá thêm nội thất
+                                                                        <i class="fa-solid fa-arrow-right"></i>
+                                                                    </p>
+                                                                </td>
+                                                                <td>
+                                                                    <p
+                                                                        class="calendar open-modal"
+                                                                        data-modal="bookingModal">
+                                                                        Hẹn xem
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="project-card">
+                                        <div class="project-image">
+                                            <a href="./detail.html" class="link_full"></a>
+                                            <img src="./assets/img/welcome_img5.jpg" alt="Project" />
+                                            <span class="badge hot">Hot</span>
+                                        </div>
+                                        <div class="project-info">
+                                            <h3>
+                                                <span>Xác thực</span>
+                                                <a href="./detail.html">Biệt thự view sông Thanh Đa</a>
+                                            </h3>
+                                            <div class="cnt">
+                                                <div class="row-grid row1">
+                                                    <p>Giá: 4tr</p>
+                                                    <p>Diện tích: 30m2</p>
+                                                    <p>Vị trí: Tầng 2</p>
+                                                </div>
+                                                <div class="row-grid row2">
+                                                    <p>
+                                                        Địa chỉ:
+                                                        <a href="#"><i class="fa-regular fa-map"></i></a>
+                                                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                                                    </p>
+                                                    <p class="services open-modal" data-modal="services">
+                                                        Xem phí dịch vụ
+                                                    </p>
+                                                </div>
+                                                <div class="row-grid row3">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    Gác:
+                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Cừa sổ:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Ban công:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Máy lạnh:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Tủ lạnh:
+                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Tủ quẩn áo:
+                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Giường:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Nệm:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Nước nóng:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Máy giặt:
+                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Chỗ phơi đồ:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Thang máy:
+                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Cho nuôi pet:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Nhận xe điện:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Không chung chủ:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="row-grid row4">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td colspan="2">
+                                                                    <p
+                                                                        class="furniture-prices open-modal"
+                                                                        data-modal="furniture">
+                                                                        Bảng giá thêm nội thất
+                                                                        <i class="fa-solid fa-arrow-right"></i>
+                                                                    </p>
+                                                                </td>
+                                                                <td>
+                                                                    <p
+                                                                        class="calendar open-modal"
+                                                                        data-modal="bookingModal">
+                                                                        Hẹn xem
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="project-card">
+                                        <div class="project-image">
+                                            <a href="./detail.html" class="link_full"></a>
+                                            <img src="./assets/img/welcome_img6.jpg" alt="Project" />
+                                            <span class="badge new">Mới</span>
+                                        </div>
+                                        <div class="project-info">
+                                            <h3>
+                                                <span>Xác thực</span>
+                                                <a href="./detail.html">Biệt thự view sông Thanh Đa</a>
+                                            </h3>
+                                            <div class="cnt">
+                                                <div class="row-grid row1">
+                                                    <p>Giá: 4tr</p>
+                                                    <p>Diện tích: 30m2</p>
+                                                    <p>Vị trí: Tầng 2</p>
+                                                </div>
+                                                <div class="row-grid row2">
+                                                    <p>
+                                                        Địa chỉ:
+                                                        <a href="#"><i class="fa-regular fa-map"></i></a>
+                                                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                                                    </p>
+                                                    <p class="services open-modal" data-modal="services">
+                                                        Xem phí dịch vụ
+                                                    </p>
+                                                </div>
+                                                <div class="row-grid row3">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    Gác:
+                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Cừa sổ:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Ban công:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Máy lạnh:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Tủ lạnh:
+                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Tủ quẩn áo:
+                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Giường:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Nệm:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Nước nóng:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Máy giặt:
+                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Chỗ phơi đồ:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Thang máy:
+                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Cho nuôi pet:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Nhận xe điện:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                                <td>
+                                                                    Không chung chủ:
+                                                                    <i class="fa-solid fa-check"></i>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="row-grid row4">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td colspan="2">
+                                                                    <p
+                                                                        class="furniture-prices open-modal"
+                                                                        data-modal="furniture">
+                                                                        Bảng giá thêm nội thất
+                                                                        <i class="fa-solid fa-arrow-right"></i>
+                                                                    </p>
+                                                                </td>
+                                                                <td>
+                                                                    <p
+                                                                        class="calendar open-modal"
+                                                                        data-modal="bookingModal">
+                                                                        Hẹn xem
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal-overlay" id="services">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h3>Giá dịch vụ</h3>
+                                            <button class="modal-close">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Điện: 4k</p>
+                                            <p>Nước: 100k/ng</p>
+                                            <p>Wifi: 100k/phòng (Nếu dùng)</p>
+                                            <p>Rác: 50k/phòng</p>
+                                            <p>Xe: 100k/chiếc</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-overlay" id="furniture">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h3>Giá nội thất</h3>
+                                            <button class="modal-close">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class="center">
+                                                <img
+                                                    src="./assets/img/noithat.jpg"
+                                                    width="1812"
+                                                    height="2046"
+                                                    alt="Giá nội thất" />
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-overlay" id="bookingModal">
+                                    <div class="modal-content">
+                                        <!-- Header -->
+                                        <div class="modal-header">
+                                            <button class="booking-back-btn" onclick="closeBookingModal()">
+                                                <i class="fas fa-chevron-left"></i>
+                                            </button>
+                                            <h3>Đặt lịch xem phòng</h3>
+                                            <button class="modal-close"><i class="fas fa-times"></i></button>
+                                        </div>
+
+                                        <!-- Content -->
+                                        <div class="modal-body">
+                                            <!-- Address -->
+                                            <label class="form-label">Địa chỉ</label>
+                                            <div class="address-section">
+                                                <p class="address-text">
+                                                    Trà Nóc nghĩa thủ, Phường 02, Quận Phú Nhuận, Thành phố Hồ Chí Minh
+                                                </p>
+                                            </div>
+
+                                            <!-- Form -->
+                                            <form id="bookingForm">
+                                                <!-- Mã phòng -->
+                                                <div class="form-group">
+                                                    <label class="form-label">Mã phòng</label>
+                                                    <input type="text" class="form-input" value="P.0004" readonly />
+                                                </div>
+
+                                                <!-- Giá phòng -->
+                                                <div class="form-group">
+                                                    <label class="form-label">Giá phòng</label>
+                                                    <input type="text" class="form-input" value="5,100,000" readonly />
+                                                </div>
+
+                                                <!-- Số người ở & Số lượng xe -->
+                                                <div class="form-group">
+                                                    <label class="form-label">Số người ở</label>
+                                                    <select class="form-select">
+                                                        <option value="">Chọn số người</option>
+                                                        <option value="1">1 người</option>
+                                                        <option value="2" selected>2 người</option>
+                                                        <option value="3">3 người</option>
+                                                        <option value="4">4 người</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="form-label">Số lượng xe</label>
+                                                    <select class="form-select">
+                                                        <option value="">Chọn số lượng xe</option>
+                                                        <option value="0">Không có xe</option>
+                                                        <option value="1" selected>1 xe</option>
+                                                        <option value="2">2 xe</option>
+                                                        <option value="3">3 xe</option>
+                                                    </select>
+                                                </div>
+
+                                                <!-- Ngày xem phòng & Giờ -->
+                                                <div class="form-group">
+                                                    <label class="form-label">Ngày xem phòng</label>
+                                                    <select class="form-select">
+                                                        <option value="">Chọn ngày xem phòng</option>
+                                                        <option value="today">Hôm nay</option>
+                                                        <option value="tomorrow">Ngày mai</option>
+                                                        <option value="custom">Chọn ngày khác...</option>
+                                                    </select>
+                                                </div>
+
+                                                <!-- Thời gian dự kiến vào -->
+                                                <div class="form-group">
+                                                    <label class="form-label">Thời gian dự kiến vào</label>
+                                                    <div class="input-with-icon">
+                                                        <input
+                                                            type="text"
+                                                            onfocus="this.type='date'"
+                                                            onblur="if(!this.value) this.type='text'"
+                                                            placeholder="Thời gian chuyển vào"
+                                                            required />
+                                                    </div>
+                                                </div>
+
+                                                <!-- Tên khách hàng -->
+                                                <div class="form-group">
+                                                    <label class="form-label">Tên khách hàng</label>
+                                                    <input
+                                                        type="text"
+                                                        class="form-input"
+                                                        placeholder="Nhập tên của bạn" />
+                                                </div>
+
+                                                <!-- Số điện thoại -->
+                                                <div class="form-group">
+                                                    <label class="form-label">Số điện thoại</label>
+                                                    <input
+                                                        type="tel"
+                                                        class="form-input"
+                                                        placeholder="Nhập số điện thoại" />
+                                                </div>
+
+                                                <!-- Ghi chú -->
+                                                <div class="form-group">
+                                                    <label class="form-label">Ghi chú</label>
+                                                    <textarea
+                                                        class="form-textarea"
+                                                        placeholder="Nhập ghi chú (nếu có)"></textarea>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <!-- Footer -->
+                                        <div class="modal-footer">
+                                            <button type="submit" class="btn-modal-submit" onclick="submitBooking()">
+                                                Đặt lịch hẹn
+                                            </button>
+                                            <button class="footer-btn btn-chat">
+                                                <i class="far fa-comment-dots"></i>
+                                            </button>
+                                            <a href="tel:0327556776" class="footer-btn btn-call">
+                                                <i class="fas fa-phone"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Pagination -->
+                                <div class="pagination">
+                                    <button class="page-btn active">1</button>
+                                    <button class="page-btn">2</button>
+                                    <button class="page-btn">3</button>
+                                    <button class="page-btn next"><i class="fas fa-chevron-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer-content">
+                        <div class="footer-col">
+                            <div class="logo">
+                                <img src="./assets/img/ft_logo.png" width="177" height="142" alt="LocHome" />
+                            </div>
+                            <p>Đối tác tin cậy trong hành trình tìm kiếm ngôi nhà mơ ước của bạn.</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="footer-col">
+                            <h4>Về chúng tôi</h4>
+                            <ul>
+                                <li><a href="./about.html">Giới thiệu</a></li>
+                                <li><a href="./properties.html">Dự án</a></li>
+                                <li><a href="#">Tin tức</a></li>
+                                <li><a href="./contact.html">Liên hệ</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-col">
+                            <h4>Hỗ trợ</h4>
+                            <ul>
+                                <li><a href="#">Hướng dẫn</a></li>
+                                <li><a href="#">Câu hỏi thường gặp</a></li>
+                                <li><a href="#">Chính sách bảo mật</a></li>
+                                <li><a href="#">Điều khoản sử dụng</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-col">
+                            <h4>Liên hệ</h4>
+                            <ul class="contact-info">
+                                <li>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    123 Đường ABC, Quận 1, TP.HCM
+                                </li>
+                                <li>
+                                    <i class="fas fa-phone"></i>
+                                    <a href="tel:0327556776">0327 556 776</a>
+                                </li>
+                                <li>
+                                    <i class="fas fa-envelope"></i>
+                                    contact@LocHome.vn
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer-bottom">
+                        <p>&copy; 2025 LocHome. All rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="./assets/js/main.js"></script>
+    </body>
 </html>

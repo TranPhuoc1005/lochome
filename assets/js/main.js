@@ -182,6 +182,172 @@ $(document).ready(function () {
         }
     });
 
+    // Filter buttons toggle
+    $('.filter-btn:not(.open-modal)').on('click', function() {
+        $(this).toggleClass('active');
+    });
+
+    // Open Modal
+    $('.open-modal').on('click', function(e) {
+        e.preventDefault();
+        const modalType = $(this).data('modal');
+        
+        if (modalType === 'price') {
+        $('#priceModal').addClass('active');
+        } else if (modalType === 'amenities') {
+        $('#amenitiesModal').addClass('active');
+        }else if (modalType === 'services') {
+        $('#services').addClass('active');
+        }else if (modalType === 'bookingModal') {
+        $('#bookingModal').addClass('active');
+        }else if (modalType === 'furniture') {
+        $('#furniture').addClass('active');
+        }
+        
+        // Prevent body scroll
+        $('body').css('overflow', 'hidden');
+    });
+
+    // Close Modal
+    $('.modal-close, .modal-overlay').on('click', function(e) {
+        if ($(e.target).hasClass('modal-overlay') || $(e.target).closest('.modal-close').length) {
+        $('.modal-overlay').removeClass('active');
+        $('body').css('overflow', 'auto');
+        }
+    });
+
+    // Prevent modal content click from closing
+    $('.modal-content').on('click', function(e) {
+        e.stopPropagation();
+    });
+
+    // ESC key to close modal
+    $(document).on('keydown', function(e) {
+        if (e.key === 'Escape') {
+        $('.modal-overlay').removeClass('active');
+        $('body').css('overflow', 'auto');
+        }
+    });
+
+    // Price option select
+    $('.price-option').on('click', function() {
+        $('.price-option').removeClass('selected');
+        $(this).addClass('selected');
+    });
+
+    // Amenity option select (multiple)
+    $('.amenity-option').on('click', function() {
+        $(this).toggleClass('selected');
+    });
+
+    // Modal submit button
+    $('.btn-modal-submit').on('click', function() {
+        const $modal = $(this).closest('.modal-overlay');
+        $modal.removeClass('active');
+        $('body').css('overflow', 'auto');
+        
+        // Get selected values
+        if ($modal.attr('id') === 'priceModal') {
+        const selected = $('.price-option.selected').text();
+        if (selected) {
+            showNotification('✓ Đã chọn giá: ' + selected);
+            // Update the filter button text
+            $('.open-modal[data-modal="price"]').html(`Giá: ${selected} <i class="fas fa-chevron-down"></i>`);
+        }
+        } else if ($modal.attr('id') === 'amenitiesModal') {
+        const selected = $('.amenity-option.selected').map(function() {
+            return $(this).text();
+        }).get();
+        
+        if (selected.length > 0) {
+            showNotification('✓ Đã chọn ' + selected.length + ' tiện ích');
+            $('.open-modal[data-modal="amenities"]').html(`Tiện ích (${selected.length}) <i class="fas fa-chevron-down"></i>`);
+        }
+        }
+    });
+
+    // Main search button
+    $('.btn-search-main').on('click', function() {
+        // Collect all selected filters
+        const activeFilters = [];
+        
+        $('.filter-btn.active').each(function() {
+        activeFilters.push($(this).text().trim());
+        });
+        
+        const priceSelected = $('.price-option.selected').text();
+        if (priceSelected) {
+        activeFilters.push('Giá: ' + priceSelected);
+        }
+        
+        const amenitiesCount = $('.amenity-option.selected').length;
+        if (amenitiesCount > 0) {
+        activeFilters.push(amenitiesCount + ' tiện ích');
+        }
+        
+        if (activeFilters.length > 0) {
+        showNotification('🔍 Tìm kiếm với: ' + activeFilters.join(', '));
+        console.log('Search with filters:', activeFilters);
+        } else {
+        showNotification('Vui lòng chọn ít nhất 1 bộ lọc');
+        }
+    });
+
+    // Show notification function
+    function showNotification(message) {
+        const $notification = $('<div>')
+        .html(message)
+        .css({
+            'position': 'fixed',
+            'top': '100px',
+            'right': '20px',
+            'background': '#8ECA48',
+            'color': 'white',
+            'padding': '15px 25px',
+            'border-radius': '10px',
+            'box-shadow': '0 5px 20px rgba(0, 0, 0, 0.2)',
+            'z-index': '9999',
+            'animation': 'slideInRight 0.5s ease',
+            'max-width': '400px',
+            'line-height': '1.5'
+        })
+        .appendTo('body');
+        
+        setTimeout(function() {
+        $notification.css('animation', 'fadeOut 0.5s ease');
+        setTimeout(function() {
+            $notification.remove();
+        }, 500);
+        }, 3000);
+    }
+
+    // Add animations if not exist
+    if (!$('style#notification-animations').length) {
+        $('<style id="notification-animations">')
+        .text(`
+            @keyframes slideInRight {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            }
+            @keyframes fadeOut {
+            to {
+                opacity: 0;
+                transform: translateX(400px);
+            }
+            }
+        `)
+        .appendTo('head');
+    }
+
+    console.log('Hero Search Filter - Initialized');
+    });
+
     // Search box focus effect
     $(".search-box input, .search-box .search-select")
         .on("focus", function () {
@@ -312,27 +478,15 @@ $(document).ready(function () {
     // Category card click effect
     $(".category-card").on("click", function () {
         const category = $(this).find("h3").text();
-        console.log("Selected category:", category);
-        // Here you can add navigation or filtering logic
     });
 
     // Project detail button
     $(".btn-detail").on("click", function (e) {
         e.stopPropagation();
         const projectName = $(this).closest(".project-card").find("h3").text();
-        console.log("View details for:", projectName);
-        // Here you can add modal or navigation logic
     });
 
-    // News card read more
-    $(".read-more").on("click", function (e) {
-        e.preventDefault();
-        const newsTitle = $(this).closest(".news-card").find("h3").text();
-        console.log("Read more:", newsTitle);
-        // Here you can add modal or navigation logic
-    });
 
-    // Social links hover effect
     $(".social-links a").hover(
         function () {
             $(this).css("transform", "translateY(-5px) rotate(360deg)");
@@ -342,7 +496,6 @@ $(document).ready(function () {
         }
     );
 
-    // Testimonial cards parallax effect on hover
     $(".team-card")
         .on("mousemove", function (e) {
             const card = $(this);
@@ -365,91 +518,21 @@ $(document).ready(function () {
             $(this).css("transform", "");
         });
 
-    // Feature cards entrance animation with delay
     $(".feature-card").each(function (index) {
         $(this).css("transition-delay", index * 0.1 + "s");
     });
 
-    // Service items entrance animation with delay
     $(".service-item").each(function (index) {
         $(this).css("transition-delay", index * 0.1 + "s");
     });
 
-    // Price formatting
     $(".price").each(function () {
         const price = $(this).text();
         if (!price.includes("tỷ") && !price.includes("triệu")) {
-            // Add formatting if needed
         }
     });
 
-    // Sticky header functionality
-    let lastScroll = 0;
-    $(window).on("scroll", function () {
-        const currentScroll = $(window).scrollTop();
 
-        if (currentScroll > lastScroll && currentScroll > 150) {
-            // Scrolling down
-            $(".header").css("transform", "translateY(-100%)");
-        } else {
-            // Scrolling up
-            $(".header").css("transform", "translateY(0)");
-        }
-
-        lastScroll = currentScroll;
-    });
-
-    // Add smooth transition for header
-    $(".header").css("transition", "transform 0.3s ease");
-
-    // Footer links smooth hover
-    $(".footer-col ul li a").hover(
-        function () {
-            $(this).css({
-                color: "#8ECA48",
-                "padding-left": "10px",
-            });
-        },
-        function () {
-            $(this).css({
-                color: "rgba(255, 255, 255, 0.8)",
-                "padding-left": "0",
-            });
-        }
-    );
-
-    // Back to top button
-    const backToTop = $("<a href='#wrapper'>")
-        .attr("id", "backToTop")
-        .html('<i class="fas fa-arrow-up"></i>')
-        .css({
-            position: "fixed",
-            bottom: "30px",
-            right: "30px",
-            width: "50px",
-            height: "50px",
-            background: "#8ECA48",
-            color: "white",
-            border: "none",
-            "border-radius": "50%",
-            cursor: "pointer",
-            display: "flex",
-            "z-index": "9999",
-            "box-shadow": "0 5px 20px rgba(0, 0, 0, 0.2)",
-            transition: "all 0.3s ease",
-            "align-items": "center",
-            "justify-content": "center"
-        })
-        .appendTo("body");
-
-    $(window).on("scroll", function () {
-        if ($(window).scrollTop() > 500) {
-            backToTop.fadeIn();
-        } else {
-            backToTop.fadeOut();
-        }
-    });
-});
 
 // View Toggle (Grid/List)
 $(".view-btn").on("click", function () {
@@ -664,13 +747,6 @@ $(document).on("keydown", function (e) {
     }
 });
 
-// Related property click
-$(".related-item").on("click", function () {
-    const propertyName = $(this).find("h4").text();
-    console.log("Navigate to:", propertyName);
-    showNotification("Đang tải " + propertyName + "...");
-});
-
 // Icon box hover
 $(".icon-box").hover(
     function () {
@@ -680,11 +756,6 @@ $(".icon-box").hover(
         $(this).find("i").css("transform", "scale(1) rotate(0deg)");
     }
 );
-
-// Amenity badge click
-$(".amenity-badge").on("click", function () {
-    $(this).toggleClass("selected");
-});
 
 $("<style>")
     .text(
