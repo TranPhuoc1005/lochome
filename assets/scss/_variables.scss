@@ -67,6 +67,17 @@ a {
     padding: 0 20px;
 }
 
+.pc {
+    display: block;
+    &-inline {
+        display: inline;
+    }
+}
+
+.sp {
+    display: none;
+}
+
 // Header
 .header {
     position: fixed;
@@ -814,32 +825,6 @@ a {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .search-filter-box {
-        padding: 15px;
-    }
-
-    .filter-row {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .filter-btn {
-        min-width: 100%;
-    }
-
-    .price-options,
-    .amenities-options {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .modal-content {
-        width: 95%;
-        max-height: 90vh;
-    }
-
-    .modal-header h3 {
-        font-size: 16px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -1086,7 +1071,6 @@ a {
                 top: -2px;
                 color: #fff;
                 border-radius: 30px;
-
             }
             a {
                 color: $secondary-color;
@@ -1146,7 +1130,7 @@ a {
                     }
                     ul {
                         li {
-                            list-style:none;
+                            list-style: none;
                         }
                     }
                 }
@@ -1591,7 +1575,7 @@ a {
     background: #fff;
     color: #494c53;
     padding: 80px 0 0;
-    border-top: 1px solid #494c53;
+    border-top: 1px solid $primary-color;
     .footer-content {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -3586,6 +3570,39 @@ a {
 }
 
 @media (max-width: 768px) {
+    .search-filter-box {
+        padding: 15px;
+    }
+
+    .filter-row {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .filter-btn {
+        min-width: 100%;
+    }
+
+    .price-options,
+    .amenities-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .modal-content {
+        width: 95%;
+        max-height: 90vh;
+    }
+
+    .modal-header h3 {
+        font-size: 16px;
+    }
+    .pc, .pc-inline {
+        display: none;
+    }
+
+    .sp {
+        display: block;
+    }
     .header .navbar .nav-menu li:last-child {
         display: block;
         .btn-primary {
