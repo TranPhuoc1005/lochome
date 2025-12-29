@@ -183,148 +183,153 @@ $(document).ready(function () {
     });
 
     // Filter buttons toggle
-    $('.filter-btn:not(.open-modal)').on('click', function() {
-        $(this).toggleClass('active');
+    $(".filter-btn:not(.open-modal)").on("click", function () {
+        $(this).toggleClass("active");
     });
 
     // Open Modal
-    $('.open-modal').on('click', function(e) {
+    $(".open-modal").on("click", function (e) {
         e.preventDefault();
-        const modalType = $(this).data('modal');
-        
-        if (modalType === 'price') {
-        $('#priceModal').addClass('active');
-        } else if (modalType === 'amenities') {
-        $('#amenitiesModal').addClass('active');
-        }else if (modalType === 'services') {
-        $('#services').addClass('active');
-        }else if (modalType === 'bookingModal') {
-        $('#bookingModal').addClass('active');
-        }else if (modalType === 'furniture') {
-        $('#furniture').addClass('active');
+        const modalType = $(this).data("modal");
+
+        if (modalType === "price") {
+            $("#priceModal").addClass("active");
+        } else if (modalType === "amenities") {
+            $("#amenitiesModal").addClass("active");
+        } else if (modalType === "services") {
+            $("#services").addClass("active");
+        } else if (modalType === "bookingModal") {
+            $("#bookingModal").addClass("active");
+        } else if (modalType === "furniture") {
+            $("#furniture").addClass("active");
         }
-        
+
         // Prevent body scroll
-        $('body').css('overflow', 'hidden');
+        $("body").css("overflow", "hidden");
     });
 
     // Close Modal
-    $('.modal-close, .modal-overlay').on('click', function(e) {
-        if ($(e.target).hasClass('modal-overlay') || $(e.target).closest('.modal-close').length) {
-        $('.modal-overlay').removeClass('active');
-        $('body').css('overflow', 'auto');
+    $(".modal-close, .modal-overlay").on("click", function (e) {
+        if ($(e.target).hasClass("modal-overlay") || $(e.target).closest(".modal-close").length) {
+            $(".modal-overlay").removeClass("active");
+            $("body").css("overflow", "auto");
         }
     });
 
     // Prevent modal content click from closing
-    $('.modal-content').on('click', function(e) {
+    $(".modal-content").on("click", function (e) {
         e.stopPropagation();
     });
 
     // ESC key to close modal
-    $(document).on('keydown', function(e) {
-        if (e.key === 'Escape') {
-        $('.modal-overlay').removeClass('active');
-        $('body').css('overflow', 'auto');
+    $(document).on("keydown", function (e) {
+        if (e.key === "Escape") {
+            $(".modal-overlay").removeClass("active");
+            $("body").css("overflow", "auto");
         }
     });
 
     // Price option select
-    $('.price-option').on('click', function() {
-        $('.price-option').removeClass('selected');
-        $(this).addClass('selected');
+    $(".price-option").on("click", function () {
+        $(".price-option").removeClass("selected");
+        $(this).addClass("selected");
     });
 
     // Amenity option select (multiple)
-    $('.amenity-option').on('click', function() {
-        $(this).toggleClass('selected');
+    $(".amenity-option").on("click", function () {
+        $(this).toggleClass("selected");
     });
 
     // Modal submit button
-    $('.btn-modal-submit').on('click', function() {
-        const $modal = $(this).closest('.modal-overlay');
-        $modal.removeClass('active');
-        $('body').css('overflow', 'auto');
-        
+    $(".btn-modal-submit").on("click", function () {
+        const $modal = $(this).closest(".modal-overlay");
+        $modal.removeClass("active");
+        $("body").css("overflow", "auto");
+
         // Get selected values
-        if ($modal.attr('id') === 'priceModal') {
-        const selected = $('.price-option.selected').text();
-        if (selected) {
-            showNotification('✓ Đã chọn giá: ' + selected);
-            // Update the filter button text
-            $('.open-modal[data-modal="price"]').html(`Giá: ${selected} <i class="fas fa-chevron-down"></i>`);
-        }
-        } else if ($modal.attr('id') === 'amenitiesModal') {
-        const selected = $('.amenity-option.selected').map(function() {
-            return $(this).text();
-        }).get();
-        
-        if (selected.length > 0) {
-            showNotification('✓ Đã chọn ' + selected.length + ' tiện ích');
-            $('.open-modal[data-modal="amenities"]').html(`Tiện ích (${selected.length}) <i class="fas fa-chevron-down"></i>`);
-        }
+        if ($modal.attr("id") === "priceModal") {
+            const selected = $(".price-option.selected").text();
+            if (selected) {
+                showNotification("✓ Đã chọn giá: " + selected);
+                // Update the filter button text
+                $('.open-modal[data-modal="price"]').html(`Giá: ${selected} <i class="fas fa-chevron-down"></i>`);
+            }
+        } else if ($modal.attr("id") === "amenitiesModal") {
+            const selected = $(".amenity-option.selected")
+                .map(function () {
+                    return $(this).text();
+                })
+                .get();
+
+            if (selected.length > 0) {
+                showNotification("✓ Đã chọn " + selected.length + " tiện ích");
+                $('.open-modal[data-modal="amenities"]').html(
+                    `Tiện ích (${selected.length}) <i class="fas fa-chevron-down"></i>`
+                );
+            }
         }
     });
 
     // Main search button
-    $('.btn-search-main').on('click', function() {
+    $(".btn-search-main").on("click", function () {
         // Collect all selected filters
         const activeFilters = [];
-        
-        $('.filter-btn.active').each(function() {
-        activeFilters.push($(this).text().trim());
+
+        $(".filter-btn.active").each(function () {
+            activeFilters.push($(this).text().trim());
         });
-        
-        const priceSelected = $('.price-option.selected').text();
+
+        const priceSelected = $(".price-option.selected").text();
         if (priceSelected) {
-        activeFilters.push('Giá: ' + priceSelected);
+            activeFilters.push("Giá: " + priceSelected);
         }
-        
-        const amenitiesCount = $('.amenity-option.selected').length;
+
+        const amenitiesCount = $(".amenity-option.selected").length;
         if (amenitiesCount > 0) {
-        activeFilters.push(amenitiesCount + ' tiện ích');
+            activeFilters.push(amenitiesCount + " tiện ích");
         }
-        
+
         if (activeFilters.length > 0) {
-        showNotification('🔍 Tìm kiếm với: ' + activeFilters.join(', '));
-        console.log('Search with filters:', activeFilters);
+            showNotification("🔍 Tìm kiếm với: " + activeFilters.join(", "));
+            console.log("Search with filters:", activeFilters);
         } else {
-        showNotification('Vui lòng chọn ít nhất 1 bộ lọc');
+            showNotification("Vui lòng chọn ít nhất 1 bộ lọc");
         }
     });
 
     // Show notification function
     function showNotification(message) {
-        const $notification = $('<div>')
-        .html(message)
-        .css({
-            'position': 'fixed',
-            'top': '100px',
-            'right': '20px',
-            'background': '#8ECA48',
-            'color': 'white',
-            'padding': '15px 25px',
-            'border-radius': '10px',
-            'box-shadow': '0 5px 20px rgba(0, 0, 0, 0.2)',
-            'z-index': '9999',
-            'animation': 'slideInRight 0.5s ease',
-            'max-width': '400px',
-            'line-height': '1.5'
-        })
-        .appendTo('body');
-        
-        setTimeout(function() {
-        $notification.css('animation', 'fadeOut 0.5s ease');
-        setTimeout(function() {
-            $notification.remove();
-        }, 500);
+        const $notification = $("<div>")
+            .html(message)
+            .css({
+                position: "fixed",
+                top: "100px",
+                right: "20px",
+                background: "#8ECA48",
+                color: "white",
+                padding: "15px 25px",
+                "border-radius": "10px",
+                "box-shadow": "0 5px 20px rgba(0, 0, 0, 0.2)",
+                "z-index": "9999",
+                animation: "slideInRight 0.5s ease",
+                "max-width": "400px",
+                "line-height": "1.5",
+            })
+            .appendTo("body");
+
+        setTimeout(function () {
+            $notification.css("animation", "fadeOut 0.5s ease");
+            setTimeout(function () {
+                $notification.remove();
+            }, 500);
         }, 3000);
     }
 
     // Add animations if not exist
-    if (!$('style#notification-animations').length) {
+    if (!$("style#notification-animations").length) {
         $('<style id="notification-animations">')
-        .text(`
+            .text(
+                `
             @keyframes slideInRight {
             from {
                 transform: translateX(400px);
@@ -341,110 +346,111 @@ $(document).ready(function () {
                 transform: translateX(400px);
             }
             }
-        `)
-        .appendTo('head');
+        `
+            )
+            .appendTo("head");
     }
 
-    console.log('Hero Search Filter - Initialized');
+    console.log("Hero Search Filter - Initialized");
+});
+
+// Search box focus effect
+$(".search-box input, .search-box .search-select")
+    .on("focus", function () {
+        $(this).parent().css("box-shadow", "0 8px 40px rgba(142, 202, 72, 0.3)");
+    })
+    .on("blur", function () {
+        $(this).parent().css("box-shadow", "0 5px 30px rgba(0, 0, 0, 0.15)");
     });
 
-    // Search box focus effect
-    $(".search-box input, .search-box .search-select")
-        .on("focus", function () {
-            $(this).parent().css("box-shadow", "0 8px 40px rgba(142, 202, 72, 0.3)");
-        })
-        .on("blur", function () {
-            $(this).parent().css("box-shadow", "0 5px 30px rgba(0, 0, 0, 0.15)");
-        });
-
-    // Search select change effect
-    $(".search-select").on("change", function () {
-        if ($(this).val() !== $(this).find("option:first").val()) {
-            $(this).css("color", "#8ECA48");
-        } else {
-            $(this).css("color", "#2c3e50");
-        }
-    });
-
-    // Price range slider
-    let minPrice = 0;
-    let maxPrice = 100000000000;
-
-    function formatPrice(price) {
-        if (price >= 1000000000) {
-            return (price / 1000000000).toFixed(1) + " tỷ";
-        } else if (price >= 1000000) {
-            return (price / 1000000).toFixed(0) + " triệu";
-        } else if (price > 0) {
-            return price.toLocaleString() + "đ";
-        }
-        return "0đ";
+// Search select change effect
+$(".search-select").on("change", function () {
+    if ($(this).val() !== $(this).find("option:first").val()) {
+        $(this).css("color", "#8ECA48");
+    } else {
+        $(this).css("color", "#2c3e50");
     }
+});
 
-    $(".range-min").on("input", function () {
-        minPrice = parseInt($(this).val());
-        if (minPrice > maxPrice) {
-            minPrice = maxPrice;
-            $(this).val(minPrice);
-        }
-        updatePriceDisplay();
-    });
+// Price range slider
+let minPrice = 0;
+let maxPrice = 100000000000;
 
-    $(".range-max").on("input", function () {
-        maxPrice = parseInt($(this).val());
-        if (maxPrice < minPrice) {
-            maxPrice = minPrice;
-            $(this).val(maxPrice);
-        }
-        updatePriceDisplay();
-    });
-
-    function updatePriceDisplay() {
-        $(".price-value").text(formatPrice(minPrice) + " - " + formatPrice(maxPrice));
+function formatPrice(price) {
+    if (price >= 1000000000) {
+        return (price / 1000000000).toFixed(1) + " tỷ";
+    } else if (price >= 1000000) {
+        return (price / 1000000).toFixed(0) + " triệu";
+    } else if (price > 0) {
+        return price.toLocaleString() + "đ";
     }
+    return "0đ";
+}
 
-    // Amenity checkbox effect
-    $('.amenity-item input[type="checkbox"]').on("change", function () {
-        if ($(this).is(":checked")) {
-            $(this).parent().css("background", "#f0f9e8");
-        } else {
-            $(this).parent().css("background", "transparent");
-        }
-    });
+$(".range-min").on("input", function () {
+    minPrice = parseInt($(this).val());
+    if (minPrice > maxPrice) {
+        minPrice = maxPrice;
+        $(this).val(minPrice);
+    }
+    updatePriceDisplay();
+});
 
-    // Load more button effect
-    $(".btn-loadmore").on("click", function () {
-        const $btn = $(this);
-        const originalText = $btn.text();
+$(".range-max").on("input", function () {
+    maxPrice = parseInt($(this).val());
+    if (maxPrice < minPrice) {
+        maxPrice = minPrice;
+        $(this).val(maxPrice);
+    }
+    updatePriceDisplay();
+});
 
-        $btn.text("Đang tải...").prop("disabled", true);
+function updatePriceDisplay() {
+    $(".price-value").text(formatPrice(minPrice) + " - " + formatPrice(maxPrice));
+}
 
-        // Simulate loading
-        setTimeout(function () {
-            $btn.text(originalText).prop("disabled", false);
+// Amenity checkbox effect
+$('.amenity-item input[type="checkbox"]').on("change", function () {
+    if ($(this).is(":checked")) {
+        $(this).parent().css("background", "#f0f9e8");
+    } else {
+        $(this).parent().css("background", "transparent");
+    }
+});
 
-            // Show success message
-            const $message = $("<div>")
-                .text("✓ Đã tải thêm nội dung")
-                .css({
-                    position: "fixed",
-                    top: "100px",
-                    right: "20px",
-                    background: "#8ECA48",
-                    color: "white",
-                    padding: "15px 25px",
-                    "border-radius": "10px",
-                    "box-shadow": "0 5px 20px rgba(0, 0, 0, 0.2)",
-                    "z-index": "9999",
-                    animation: "slideInRight 0.5s ease",
-                })
-                .appendTo("body");
+// Load more button effect
+$(".btn-loadmore").on("click", function () {
+    const $btn = $(this);
+    const originalText = $btn.text();
 
-            // Add animation keyframes
-            if (!$("style#notification-animation").length) {
-                $('<style id="notification-animation">')
-                    .text(
-                        `
+    $btn.text("Đang tải...").prop("disabled", true);
+
+    // Simulate loading
+    setTimeout(function () {
+        $btn.text(originalText).prop("disabled", false);
+
+        // Show success message
+        const $message = $("<div>")
+            .text("✓ Đã tải thêm nội dung")
+            .css({
+                position: "fixed",
+                top: "100px",
+                right: "20px",
+                background: "#8ECA48",
+                color: "white",
+                padding: "15px 25px",
+                "border-radius": "10px",
+                "box-shadow": "0 5px 20px rgba(0, 0, 0, 0.2)",
+                "z-index": "9999",
+                animation: "slideInRight 0.5s ease",
+            })
+            .appendTo("body");
+
+        // Add animation keyframes
+        if (!$("style#notification-animation").length) {
+            $('<style id="notification-animation">')
+                .text(
+                    `
             @keyframes slideInRight {
               from {
                 transform: translateX(400px);
@@ -462,77 +468,71 @@ $(document).ready(function () {
               }
             }
           `
-                    )
-                    .appendTo("head");
-            }
+                )
+                .appendTo("head");
+        }
 
+        setTimeout(function () {
+            $message.css("animation", "fadeOut 0.5s ease");
             setTimeout(function () {
-                $message.css("animation", "fadeOut 0.5s ease");
-                setTimeout(function () {
-                    $message.remove();
-                }, 500);
-            }, 2000);
-        }, 1500);
+                $message.remove();
+            }, 500);
+        }, 2000);
+    }, 1500);
+});
+
+// Category card click effect
+$(".category-card").on("click", function () {
+    const category = $(this).find("h3").text();
+});
+
+// Project detail button
+$(".btn-detail").on("click", function (e) {
+    e.stopPropagation();
+    const projectName = $(this).closest(".project-card").find("h3").text();
+});
+
+$(".social-links a").hover(
+    function () {
+        $(this).css("transform", "translateY(-5px) rotate(360deg)");
+    },
+    function () {
+        $(this).css("transform", "translateY(0) rotate(0deg)");
+    }
+);
+
+$(".team-card")
+    .on("mousemove", function (e) {
+        const card = $(this);
+        const rect = card[0].getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = (y - centerY) / 20;
+        const rotateY = (centerX - x) / 20;
+
+        card.css("transform", `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`);
+    })
+    .on("mouseleave", function () {
+        $(this).css("transform", "");
     });
 
-    // Category card click effect
-    $(".category-card").on("click", function () {
-        const category = $(this).find("h3").text();
-    });
+$(".feature-card").each(function (index) {
+    $(this).css("transition-delay", index * 0.1 + "s");
+});
 
-    // Project detail button
-    $(".btn-detail").on("click", function (e) {
-        e.stopPropagation();
-        const projectName = $(this).closest(".project-card").find("h3").text();
-    });
+$(".service-item").each(function (index) {
+    $(this).css("transition-delay", index * 0.1 + "s");
+});
 
-
-    $(".social-links a").hover(
-        function () {
-            $(this).css("transform", "translateY(-5px) rotate(360deg)");
-        },
-        function () {
-            $(this).css("transform", "translateY(0) rotate(0deg)");
-        }
-    );
-
-    $(".team-card")
-        .on("mousemove", function (e) {
-            const card = $(this);
-            const rect = card[0].getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-
-            const rotateX = (y - centerY) / 20;
-            const rotateY = (centerX - x) / 20;
-
-            card.css(
-                "transform",
-                `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`
-            );
-        })
-        .on("mouseleave", function () {
-            $(this).css("transform", "");
-        });
-
-    $(".feature-card").each(function (index) {
-        $(this).css("transition-delay", index * 0.1 + "s");
-    });
-
-    $(".service-item").each(function (index) {
-        $(this).css("transition-delay", index * 0.1 + "s");
-    });
-
-    $(".price").each(function () {
-        const price = $(this).text();
-        if (!price.includes("tỷ") && !price.includes("triệu")) {
-        }
-    });
-
-
+$(".price").each(function () {
+    const price = $(this).text();
+    if (!price.includes("tỷ") && !price.includes("triệu")) {
+    }
+});
 
 // View Toggle (Grid/List)
 $(".view-btn").on("click", function () {
@@ -547,7 +547,6 @@ $(".view-btn").on("click", function () {
     }
 });
 
-// Add list view styles
 $("<style>")
     .text(
         `
@@ -795,10 +794,10 @@ function handleSwipe() {
 
 // Sidebar sticky scroll
 $(window).on("scroll", function () {
-    if($(".detail-sidebar").length) {
+    if ($(".detail-sidebar").length) {
         const scrollTop = $(window).scrollTop();
         const sidebarTop = $(".detail-sidebar").offset().top - 110;
-    
+
         if (scrollTop > sidebarTop) {
             $(".sidebar-sticky").addClass("is-sticky");
         } else {
@@ -806,5 +805,3 @@ $(window).on("scroll", function () {
         }
     }
 });
-
-

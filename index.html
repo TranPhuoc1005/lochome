@@ -39,14 +39,18 @@
                                 <li><a href="./" class="active">Trang chủ</a></li>
                                 <li><a href="./about.html">Giới thiệu</a></li>
                                 <li><a href="./properties.html">Sản phẩm</a></li>
-                                
+
                                 <li><a href="./contact.html">Liên hệ</a></li>
                                 <li><a href="tel:0327556776" class="btn-primary">Tư vấn</a></li>
                             </ul>
                             <div class="social-links">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#">Zalo</a>
-                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                                <a href="https://www.facebook.com/profile.php?id=61584523752326" target="_blank">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://zalo.me/g/clpvft406" target="_blank">Zalo</a>
+                                <a href="https://www.tiktok.com/@loc.home" target="_blank">
+                                    <i class="fa-brands fa-tiktok"></i>
+                                </a>
                             </div>
                             <div class="mobile-menu-toggle">
                                 <i class="fas fa-bars"></i>
@@ -64,7 +68,9 @@
                             <h1>
                                 Đến
                                 <span class="highlight">LocHome</span>
-                                <span class="pc-inline">- </span><br class="sp">Tìm Trọ Dễ Òm
+                                <span class="pc-inline">-</span>
+                                <br class="sp" />
+                                Tìm Trọ Dễ Òm
                             </h1>
                             <p>Khám phá hàng ngàn sản phẩm chất lượng cao phù hợp với mọi nhu cầu của bạn</p>
 
@@ -89,27 +95,12 @@
                                         <option>Phường 2</option>
                                     </select>
                                 </div>
-                                <div class="advanced-search-grid grid-4">
-                                    <select class="advanced-select">
-                                        <option>Chọn phòng trọ / căn hộ</option>
-                                        <option>Phòng trọ</option>
-                                        <option>Căn hộ</option>
-                                    </select>
-                                    <select class="advanced-select">
-                                        <option>Chọn mặt bằng / nhà nguyên căn</option>
-                                        <option>Mặt bằng</option>
-                                        <option>Nhà nguyên căn</option>
-                                    </select>
-                                    <select class="advanced-select">
-                                        <option>Chọn ký túc xá</option>
-                                        <option>Ký túc xá</option>
-                                    </select>
-                                    <select class="advanced-select">
-                                        <option>Chọn sleepbox</option>
-                                        <option>Sleepbox</option>
-                                    </select>
+                                <div class="advanced-search-grid grid-3">
+                                    <button class="filter-btn">Chọn phòng trọ / căn hộ</button>
+                                    <button class="filter-btn">Chọn mặt bằng / nhà nguyên căn</button>
+                                    <button class="filter-btn">Chọn ký túc xá / sleepbox</button>
                                 </div>
-                                <div class="advanced-search-grid">
+                                <div class="advanced-search-grid grid-4">
                                     <button class="filter-btn open-modal" data-modal="price">
                                         Giá
                                         <i class="fas fa-chevron-down"></i>
@@ -118,6 +109,12 @@
                                         Tiện ích
                                         <i class="fas fa-chevron-down"></i>
                                     </button>
+                                    <select class="advanced-select">
+                                        <option>Sắp xếp theo</option>
+                                        <option>Mặc định</option>
+                                        <option>Tăng dần</option>
+                                        <option>Giảm dần</option>
+                                    </select>
                                     <button class="filter-btn">Áp dụng</button>
                                 </div>
                             </div>
@@ -132,15 +129,15 @@
                                     </div>
                                     <div class="modal-body">
                                         <div class="price-options">
-                                            <button class="price-option">< 1 Triệu</button>
-                                            <button class="price-option">1 - 2 triệu</button>
+                                            <button class="price-option"><= 2 Triệu</button>
                                             <button class="price-option">2 - 3 triệu</button>
-                                            <button class="price-option">3 - 5 triệu</button>
-                                            <button class="price-option">5 - 8 triệu</button>
+                                            <button class="price-option">3 - 4 triệu</button>
+                                            <button class="price-option">4 - 5 triệu</button>
+                                            <button class="price-option">5 - 6 triệu</button>
+                                            <button class="price-option">6 - 8 triệu</button>
                                             <button class="price-option">8 - 10 triệu</button>
-                                            <button class="price-option">10 - 15 triệu</button>
-                                            <button class="price-option">15 - 20 triệu</button>
-                                            <button class="price-option">> 20 triệu</button>
+                                            <button class="price-option">10 - 12 triệu</button>
+                                            <button class="price-option">> 12 triệu</button>
                                         </div>
                                     </div>
                                     <div class="modal-footer">
@@ -199,21 +196,24 @@
                                     </h3>
                                     <div class="cnt">
                                         <div class="row-grid row1">
-                                            <p>Giá: 4tr</p>
+                                            <p class="project-price">Giá: 4 triệu</p>
                                             <p>Diện tích: 30m2</p>
                                             <p>Vị trí: Tầng 2</p>
                                         </div>
-                                        <div class="row-grid row2">
+                                        <div class="row2">
                                             <p>
-                                                Địa chỉ:
-                                                <a href="#"><i class="fa-regular fa-map"></i></a>
-                                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                                                Địa chỉ: 100/20/30, đường Phạm Văn Chiêu, phường 2, quận Gò Vấp, TP.HCM
                                             </p>
                                             <p class="services open-modal" data-modal="services">Xem phí dịch vụ</p>
                                         </div>
                                         <div class="row-grid row3">
                                             <div class="item">
-                                                <p class="ttl"><span><i class="fa-solid fa-bullseye"></i> Tiện ích</span></p>
+                                                <p class="ttl">
+                                                    <span>
+                                                        <i class="fa-solid fa-bullseye"></i>
+                                                        Tiện ích
+                                                    </span>
+                                                </p>
                                                 <div class="list">
                                                     <ul>
                                                         <li>Có gác</li>
@@ -223,21 +223,35 @@
                                                         <li>Máy giặt chung</li>
                                                     </ul>
                                                     <ul>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> Cửa sổ</li>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> Nước máy</li>
+                                                        <li class="active">
+                                                            <i class="fa-solid fa-check"></i>
+                                                            Cửa sổ
+                                                        </li>
+                                                        <li class="active">
+                                                            <i class="fa-solid fa-check"></i>
+                                                            Nước máy
+                                                        </li>
                                                         <li>Giờ tự do</li>
                                                         <li>Free wifi</li>
                                                     </ul>
                                                     <ul>
                                                         <li>Ban công</li>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> WC riêng</li>
+                                                        <li class="active">
+                                                            <i class="fa-solid fa-check"></i>
+                                                            WC riêng
+                                                        </li>
                                                         <li>Chung chủ</li>
                                                         <li>Khóa vân tay</li>
                                                     </ul>
                                                 </div>
                                             </div>
                                             <div class="item">
-                                                <p class="ttl"><span><i class="fa-solid fa-bullseye"></i> Nội thất</span></p>
+                                                <p class="ttl">
+                                                    <span>
+                                                        <i class="fa-solid fa-bullseye"></i>
+                                                        Nội thất
+                                                    </span>
+                                                </p>
                                                 <div class="list">
                                                     <ul>
                                                         <li>Tủ lạnh</li>
@@ -259,12 +273,17 @@
                                                 <tbody>
                                                     <tr>
                                                         <td colspan="2">
-                                                            <p class="furniture-prices open-modal" data-modal="furniture">
+                                                            <p
+                                                                class="furniture-prices open-modal"
+                                                                data-modal="furniture">
                                                                 Bảng giá thêm nội thất
-                                                                <i class="fa-solid fa-arrow-right"></i>
                                                             </p>
                                                         </td>
-                                                        <td><p class="calendar open-modal" data-modal="bookingModal">Hẹn xem</p></td>
+                                                        <td>
+                                                            <p class="calendar open-modal" data-modal="bookingModal">
+                                                                Hẹn xem
+                                                            </p>
+                                                        </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -284,21 +303,24 @@
                                     </h3>
                                     <div class="cnt">
                                         <div class="row-grid row1">
-                                            <p>Giá: 4tr</p>
+                                            <p class="project-price">Giá: 4 triệu</p>
                                             <p>Diện tích: 30m2</p>
                                             <p>Vị trí: Tầng 2</p>
                                         </div>
-                                        <div class="row-grid row2">
+                                        <div class="row2">
                                             <p>
-                                                Địa chỉ:
-                                                <a href="#"><i class="fa-regular fa-map"></i></a>
-                                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                                                Địa chỉ: 100/20/30, đường Phạm Văn Chiêu, phường 2, quận Gò Vấp, TP.HCM
                                             </p>
                                             <p class="services open-modal" data-modal="services">Xem phí dịch vụ</p>
                                         </div>
                                         <div class="row-grid row3">
                                             <div class="item">
-                                                <p class="ttl"><span><i class="fa-solid fa-bullseye"></i> Tiện ích</span></p>
+                                                <p class="ttl">
+                                                    <span>
+                                                        <i class="fa-solid fa-bullseye"></i>
+                                                        Tiện ích
+                                                    </span>
+                                                </p>
                                                 <div class="list">
                                                     <ul>
                                                         <li>Có gác</li>
@@ -308,21 +330,35 @@
                                                         <li>Máy giặt chung</li>
                                                     </ul>
                                                     <ul>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> Cửa sổ</li>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> Nước máy</li>
+                                                        <li class="active">
+                                                            <i class="fa-solid fa-check"></i>
+                                                            Cửa sổ
+                                                        </li>
+                                                        <li class="active">
+                                                            <i class="fa-solid fa-check"></i>
+                                                            Nước máy
+                                                        </li>
                                                         <li>Giờ tự do</li>
                                                         <li>Free wifi</li>
                                                     </ul>
                                                     <ul>
                                                         <li>Ban công</li>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> WC riêng</li>
+                                                        <li class="active">
+                                                            <i class="fa-solid fa-check"></i>
+                                                            WC riêng
+                                                        </li>
                                                         <li>Chung chủ</li>
                                                         <li>Khóa vân tay</li>
                                                     </ul>
                                                 </div>
                                             </div>
                                             <div class="item">
-                                                <p class="ttl"><span><i class="fa-solid fa-bullseye"></i> Nội thất</span></p>
+                                                <p class="ttl">
+                                                    <span>
+                                                        <i class="fa-solid fa-bullseye"></i>
+                                                        Nội thất
+                                                    </span>
+                                                </p>
                                                 <div class="list">
                                                     <ul>
                                                         <li>Tủ lạnh</li>
@@ -344,12 +380,17 @@
                                                 <tbody>
                                                     <tr>
                                                         <td colspan="2">
-                                                            <p class="furniture-prices open-modal" data-modal="furniture">
+                                                            <p
+                                                                class="furniture-prices open-modal"
+                                                                data-modal="furniture">
                                                                 Bảng giá thêm nội thất
-                                                                <i class="fa-solid fa-arrow-right"></i>
                                                             </p>
                                                         </td>
-                                                        <td><p class="calendar open-modal" data-modal="bookingModal">Hẹn xem</p></td>
+                                                        <td>
+                                                            <p class="calendar open-modal" data-modal="bookingModal">
+                                                                Hẹn xem
+                                                            </p>
+                                                        </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -369,21 +410,24 @@
                                     </h3>
                                     <div class="cnt">
                                         <div class="row-grid row1">
-                                            <p>Giá: 4tr</p>
+                                            <p class="project-price">Giá: 4 triệu</p>
                                             <p>Diện tích: 30m2</p>
                                             <p>Vị trí: Tầng 2</p>
                                         </div>
-                                        <div class="row-grid row2">
+                                        <div class="row2">
                                             <p>
-                                                Địa chỉ:
-                                                <a href="#"><i class="fa-regular fa-map"></i></a>
-                                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                                                Địa chỉ: 100/20/30, đường Phạm Văn Chiêu, phường 2, quận Gò Vấp, TP.HCM
                                             </p>
                                             <p class="services open-modal" data-modal="services">Xem phí dịch vụ</p>
                                         </div>
                                         <div class="row-grid row3">
                                             <div class="item">
-                                                <p class="ttl"><span><i class="fa-solid fa-bullseye"></i> Tiện ích</span></p>
+                                                <p class="ttl">
+                                                    <span>
+                                                        <i class="fa-solid fa-bullseye"></i>
+                                                        Tiện ích
+                                                    </span>
+                                                </p>
                                                 <div class="list">
                                                     <ul>
                                                         <li>Có gác</li>
@@ -393,21 +437,35 @@
                                                         <li>Máy giặt chung</li>
                                                     </ul>
                                                     <ul>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> Cửa sổ</li>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> Nước máy</li>
+                                                        <li class="active">
+                                                            <i class="fa-solid fa-check"></i>
+                                                            Cửa sổ
+                                                        </li>
+                                                        <li class="active">
+                                                            <i class="fa-solid fa-check"></i>
+                                                            Nước máy
+                                                        </li>
                                                         <li>Giờ tự do</li>
                                                         <li>Free wifi</li>
                                                     </ul>
                                                     <ul>
                                                         <li>Ban công</li>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> WC riêng</li>
+                                                        <li class="active">
+                                                            <i class="fa-solid fa-check"></i>
+                                                            WC riêng
+                                                        </li>
                                                         <li>Chung chủ</li>
                                                         <li>Khóa vân tay</li>
                                                     </ul>
                                                 </div>
                                             </div>
                                             <div class="item">
-                                                <p class="ttl"><span><i class="fa-solid fa-bullseye"></i> Nội thất</span></p>
+                                                <p class="ttl">
+                                                    <span>
+                                                        <i class="fa-solid fa-bullseye"></i>
+                                                        Nội thất
+                                                    </span>
+                                                </p>
                                                 <div class="list">
                                                     <ul>
                                                         <li>Tủ lạnh</li>
@@ -429,12 +487,17 @@
                                                 <tbody>
                                                     <tr>
                                                         <td colspan="2">
-                                                            <p class="furniture-prices open-modal" data-modal="furniture">
+                                                            <p
+                                                                class="furniture-prices open-modal"
+                                                                data-modal="furniture">
                                                                 Bảng giá thêm nội thất
-                                                                <i class="fa-solid fa-arrow-right"></i>
                                                             </p>
                                                         </td>
-                                                        <td><p class="calendar open-modal" data-modal="bookingModal">Hẹn xem</p></td>
+                                                        <td>
+                                                            <p class="calendar open-modal" data-modal="bookingModal">
+                                                                Hẹn xem
+                                                            </p>
+                                                        </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -454,21 +517,24 @@
                                     </h3>
                                     <div class="cnt">
                                         <div class="row-grid row1">
-                                            <p>Giá: 4tr</p>
+                                            <p class="project-price">Giá: 4 triệu</p>
                                             <p>Diện tích: 30m2</p>
                                             <p>Vị trí: Tầng 2</p>
                                         </div>
-                                        <div class="row-grid row2">
+                                        <div class="row2">
                                             <p>
-                                                Địa chỉ:
-                                                <a href="#"><i class="fa-regular fa-map"></i></a>
-                                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                                                Địa chỉ: 100/20/30, đường Phạm Văn Chiêu, phường 2, quận Gò Vấp, TP.HCM
                                             </p>
                                             <p class="services open-modal" data-modal="services">Xem phí dịch vụ</p>
                                         </div>
                                         <div class="row-grid row3">
                                             <div class="item">
-                                                <p class="ttl"><span><i class="fa-solid fa-bullseye"></i> Tiện ích</span></p>
+                                                <p class="ttl">
+                                                    <span>
+                                                        <i class="fa-solid fa-bullseye"></i>
+                                                        Tiện ích
+                                                    </span>
+                                                </p>
                                                 <div class="list">
                                                     <ul>
                                                         <li>Có gác</li>
@@ -478,21 +544,35 @@
                                                         <li>Máy giặt chung</li>
                                                     </ul>
                                                     <ul>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> Cửa sổ</li>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> Nước máy</li>
+                                                        <li class="active">
+                                                            <i class="fa-solid fa-check"></i>
+                                                            Cửa sổ
+                                                        </li>
+                                                        <li class="active">
+                                                            <i class="fa-solid fa-check"></i>
+                                                            Nước máy
+                                                        </li>
                                                         <li>Giờ tự do</li>
                                                         <li>Free wifi</li>
                                                     </ul>
                                                     <ul>
                                                         <li>Ban công</li>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> WC riêng</li>
+                                                        <li class="active">
+                                                            <i class="fa-solid fa-check"></i>
+                                                            WC riêng
+                                                        </li>
                                                         <li>Chung chủ</li>
                                                         <li>Khóa vân tay</li>
                                                     </ul>
                                                 </div>
                                             </div>
                                             <div class="item">
-                                                <p class="ttl"><span><i class="fa-solid fa-bullseye"></i> Nội thất</span></p>
+                                                <p class="ttl">
+                                                    <span>
+                                                        <i class="fa-solid fa-bullseye"></i>
+                                                        Nội thất
+                                                    </span>
+                                                </p>
                                                 <div class="list">
                                                     <ul>
                                                         <li>Tủ lạnh</li>
@@ -514,12 +594,17 @@
                                                 <tbody>
                                                     <tr>
                                                         <td colspan="2">
-                                                            <p class="furniture-prices open-modal" data-modal="furniture">
+                                                            <p
+                                                                class="furniture-prices open-modal"
+                                                                data-modal="furniture">
                                                                 Bảng giá thêm nội thất
-                                                                <i class="fa-solid fa-arrow-right"></i>
                                                             </p>
                                                         </td>
-                                                        <td><p class="calendar open-modal" data-modal="bookingModal">Hẹn xem</p></td>
+                                                        <td>
+                                                            <p class="calendar open-modal" data-modal="bookingModal">
+                                                                Hẹn xem
+                                                            </p>
+                                                        </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -539,21 +624,24 @@
                                     </h3>
                                     <div class="cnt">
                                         <div class="row-grid row1">
-                                            <p>Giá: 4tr</p>
+                                            <p class="project-price">Giá: 4 triệu</p>
                                             <p>Diện tích: 30m2</p>
                                             <p>Vị trí: Tầng 2</p>
                                         </div>
-                                        <div class="row-grid row2">
+                                        <div class="row2">
                                             <p>
-                                                Địa chỉ:
-                                                <a href="#"><i class="fa-regular fa-map"></i></a>
-                                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                                                Địa chỉ: 100/20/30, đường Phạm Văn Chiêu, phường 2, quận Gò Vấp, TP.HCM
                                             </p>
                                             <p class="services open-modal" data-modal="services">Xem phí dịch vụ</p>
                                         </div>
                                         <div class="row-grid row3">
                                             <div class="item">
-                                                <p class="ttl"><span><i class="fa-solid fa-bullseye"></i> Tiện ích</span></p>
+                                                <p class="ttl">
+                                                    <span>
+                                                        <i class="fa-solid fa-bullseye"></i>
+                                                        Tiện ích
+                                                    </span>
+                                                </p>
                                                 <div class="list">
                                                     <ul>
                                                         <li>Có gác</li>
@@ -563,21 +651,35 @@
                                                         <li>Máy giặt chung</li>
                                                     </ul>
                                                     <ul>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> Cửa sổ</li>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> Nước máy</li>
+                                                        <li class="active">
+                                                            <i class="fa-solid fa-check"></i>
+                                                            Cửa sổ
+                                                        </li>
+                                                        <li class="active">
+                                                            <i class="fa-solid fa-check"></i>
+                                                            Nước máy
+                                                        </li>
                                                         <li>Giờ tự do</li>
                                                         <li>Free wifi</li>
                                                     </ul>
                                                     <ul>
                                                         <li>Ban công</li>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> WC riêng</li>
+                                                        <li class="active">
+                                                            <i class="fa-solid fa-check"></i>
+                                                            WC riêng
+                                                        </li>
                                                         <li>Chung chủ</li>
                                                         <li>Khóa vân tay</li>
                                                     </ul>
                                                 </div>
                                             </div>
                                             <div class="item">
-                                                <p class="ttl"><span><i class="fa-solid fa-bullseye"></i> Nội thất</span></p>
+                                                <p class="ttl">
+                                                    <span>
+                                                        <i class="fa-solid fa-bullseye"></i>
+                                                        Nội thất
+                                                    </span>
+                                                </p>
                                                 <div class="list">
                                                     <ul>
                                                         <li>Tủ lạnh</li>
@@ -599,12 +701,17 @@
                                                 <tbody>
                                                     <tr>
                                                         <td colspan="2">
-                                                            <p class="furniture-prices open-modal" data-modal="furniture">
+                                                            <p
+                                                                class="furniture-prices open-modal"
+                                                                data-modal="furniture">
                                                                 Bảng giá thêm nội thất
-                                                                <i class="fa-solid fa-arrow-right"></i>
                                                             </p>
                                                         </td>
-                                                        <td><p class="calendar open-modal" data-modal="bookingModal">Hẹn xem</p></td>
+                                                        <td>
+                                                            <p class="calendar open-modal" data-modal="bookingModal">
+                                                                Hẹn xem
+                                                            </p>
+                                                        </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -624,21 +731,24 @@
                                     </h3>
                                     <div class="cnt">
                                         <div class="row-grid row1">
-                                            <p>Giá: 4tr</p>
+                                            <p class="project-price">Giá: 4 triệu</p>
                                             <p>Diện tích: 30m2</p>
                                             <p>Vị trí: Tầng 2</p>
                                         </div>
-                                        <div class="row-grid row2">
+                                        <div class="row2">
                                             <p>
-                                                Địa chỉ:
-                                                <a href="#"><i class="fa-regular fa-map"></i></a>
-                                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                                                Địa chỉ: 100/20/30, đường Phạm Văn Chiêu, phường 2, quận Gò Vấp, TP.HCM
                                             </p>
                                             <p class="services open-modal" data-modal="services">Xem phí dịch vụ</p>
                                         </div>
                                         <div class="row-grid row3">
                                             <div class="item">
-                                                <p class="ttl"><span><i class="fa-solid fa-bullseye"></i> Tiện ích</span></p>
+                                                <p class="ttl">
+                                                    <span>
+                                                        <i class="fa-solid fa-bullseye"></i>
+                                                        Tiện ích
+                                                    </span>
+                                                </p>
                                                 <div class="list">
                                                     <ul>
                                                         <li>Có gác</li>
@@ -648,21 +758,35 @@
                                                         <li>Máy giặt chung</li>
                                                     </ul>
                                                     <ul>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> Cửa sổ</li>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> Nước máy</li>
+                                                        <li class="active">
+                                                            <i class="fa-solid fa-check"></i>
+                                                            Cửa sổ
+                                                        </li>
+                                                        <li class="active">
+                                                            <i class="fa-solid fa-check"></i>
+                                                            Nước máy
+                                                        </li>
                                                         <li>Giờ tự do</li>
                                                         <li>Free wifi</li>
                                                     </ul>
                                                     <ul>
                                                         <li>Ban công</li>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> WC riêng</li>
+                                                        <li class="active">
+                                                            <i class="fa-solid fa-check"></i>
+                                                            WC riêng
+                                                        </li>
                                                         <li>Chung chủ</li>
                                                         <li>Khóa vân tay</li>
                                                     </ul>
                                                 </div>
                                             </div>
                                             <div class="item">
-                                                <p class="ttl"><span><i class="fa-solid fa-bullseye"></i> Nội thất</span></p>
+                                                <p class="ttl">
+                                                    <span>
+                                                        <i class="fa-solid fa-bullseye"></i>
+                                                        Nội thất
+                                                    </span>
+                                                </p>
                                                 <div class="list">
                                                     <ul>
                                                         <li>Tủ lạnh</li>
@@ -684,12 +808,17 @@
                                                 <tbody>
                                                     <tr>
                                                         <td colspan="2">
-                                                            <p class="furniture-prices open-modal" data-modal="furniture">
+                                                            <p
+                                                                class="furniture-prices open-modal"
+                                                                data-modal="furniture">
                                                                 Bảng giá thêm nội thất
-                                                                <i class="fa-solid fa-arrow-right"></i>
                                                             </p>
                                                         </td>
-                                                        <td><p class="calendar open-modal" data-modal="bookingModal">Hẹn xem</p></td>
+                                                        <td>
+                                                            <p class="calendar open-modal" data-modal="bookingModal">
+                                                                Hẹn xem
+                                                            </p>
+                                                        </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -697,92 +826,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <a href="./detail.html" class="link_full"></a>
-                                    <img src="./assets/img/welcome_img2.jpg" alt="Project" />
-                                </div>
-                                <div class="project-info">
-                                    <h3>
-                                        <span>Xác thực</span>
-                                        <a href="./detail.html">Biệt thự view sông Thanh Đa</a>
-                                    </h3>
-                                    <div class="cnt">
-                                        <div class="row-grid row1">
-                                            <p>Giá: 4tr</p>
-                                            <p>Diện tích: 30m2</p>
-                                            <p>Vị trí: Tầng 2</p>
-                                        </div>
-                                        <div class="row-grid row2">
-                                            <p>
-                                                Địa chỉ:
-                                                <a href="#"><i class="fa-regular fa-map"></i></a>
-                                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                                            </p>
-                                            <p class="services open-modal" data-modal="services">Xem phí dịch vụ</p>
-                                        </div>
-                                        <div class="row-grid row3">
-                                            <div class="item">
-                                                <p class="ttl"><span><i class="fa-solid fa-bullseye"></i> Tiện ích</span></p>
-                                                <div class="list">
-                                                    <ul>
-                                                        <li>Có gác</li>
-                                                        <li>Có bếp</li>
-                                                        <li>Nuôi pet</li>
-                                                        <li>Tách bếp</li>
-                                                        <li>Máy giặt chung</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> Cửa sổ</li>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> Nước máy</li>
-                                                        <li>Giờ tự do</li>
-                                                        <li>Free wifi</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>Ban công</li>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> WC riêng</li>
-                                                        <li>Chung chủ</li>
-                                                        <li>Khóa vân tay</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <p class="ttl"><span><i class="fa-solid fa-bullseye"></i> Nội thất</span></p>
-                                                <div class="list">
-                                                    <ul>
-                                                        <li>Tủ lạnh</li>
-                                                        <li>Giường</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>Máy lạnh</li>
-                                                        <li>Tủ đồ</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>Máy giặt</li>
-                                                        <li>Full nội thất</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row-grid row4">
-                                            <table>
-                                                <tbody>
-                                                    <tr>
-                                                        <td colspan="2">
-                                                            <p class="furniture-prices open-modal" data-modal="furniture">
-                                                                Bảng giá thêm nội thất
-                                                                <i class="fa-solid fa-arrow-right"></i>
-                                                            </p>
-                                                        </td>
-                                                        <td><p class="calendar open-modal" data-modal="bookingModal">Hẹn xem</p></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
 
                         <div class="text-center">
@@ -816,7 +859,9 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <p class="center"><img src="./assets/img/noithat.jpg" width="1812" height="2046" alt="Giá nội thất"></p>
+                                <p class="center">
+                                    <img src="./assets/img/noithat.jpg" width="1812" height="2046" alt="Giá nội thất" />
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -893,7 +938,7 @@
                                     <div class="form-group">
                                         <label class="form-label">Thời gian dự kiến vào</label>
                                         <div class="input-with-icon">
-                                             <input
+                                            <input
                                                 type="text"
                                                 onfocus="this.type='date'"
                                                 onblur="if(!this.value) this.type='text'"
@@ -947,778 +992,46 @@
 
                         <div class="categories-grid">
                             <div class="category-card">
-                                <img src="./assets/img/cate_img1.jfif" alt="Villa" />
+                                <img src="./assets/img/cate_img1.jpg" alt="Phòng trọ" />
                                 <div class="category-overlay">
-                                    <h3>Biệt thự</h3>
+                                    <h3>Phòng trọ</h3>
                                     <p>285 dự án</p>
                                 </div>
                             </div>
                             <div class="category-card">
-                                <img src="./assets/img/cate_img2.jfif" alt="Apartment" />
+                                <img src="./assets/img/cate_img2.jpg" alt="Căn hộ" />
                                 <div class="category-overlay">
-                                    <h3>Chung cư</h3>
+                                    <h3>Căn hộ</h3>
                                     <p>542 dự án</p>
                                 </div>
                             </div>
                             <div class="category-card">
-                                <img src="./assets/img/cate_img3.jfif" alt="Townhouse" />
+                                <img src="./assets/img/cate_img3.jpg" alt="Mặt bằng" />
                                 <div class="category-overlay">
-                                    <h3>Nhà phố</h3>
+                                    <h3>Mặt bằng</h3>
                                     <p>398 dự án</p>
                                 </div>
                             </div>
                             <div class="category-card">
-                                <img src="./assets/img/welcome_img4.jpg" alt="Office" />
+                                <img src="./assets/img/cate_img4.jpg" alt="Nhà nguyên căn" />
                                 <div class="category-overlay">
-                                    <h3>Văn phòng</h3>
+                                    <h3>Nhà nguyên căn</h3>
                                     <p>156 dự án</p>
                                 </div>
                             </div>
                             <div class="category-card">
-                                <img src="./assets/img/welcome_img5.jpg" alt="Resort" />
+                                <img src="./assets/img/cate_img5.jpg" alt="Ký túc xá" />
                                 <div class="category-overlay">
-                                    <h3>Nghỉ dưỡng</h3>
+                                    <h3>Ký túc xá</h3>
                                     <p>124 dự án</p>
                                 </div>
                             </div>
                             <div class="category-card">
-                                <img src="./assets/img/cate_img6.jfif"" alt="Land">
+                                <img src="./assets/img/cate_img6.jpg" alt="Sleepbox" />
                                 <div class="category-overlay">
-                                    <h3>Đất nền</h3>
+                                    <h3>Sleepbox</h3>
                                     <p>432 dự án</p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Latest Projects -->
-                <section class="latest-projects">
-                    <div class="container">
-                        <div class="section-header">
-                            <h2>CÁC DỰ ÁN MỚI NHẤT</h2>
-                            <p>Cập nhật liên tục các dự án bất động sản mới nhất trên thị trường</p>
-                        </div>
-
-                        <div class="projects-grid">
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <a href="./detail.html" class="link_full"></a>
-                                    <img src="./assets/img/welcome_img2.jpg" alt="Project" />
-                                </div>
-                                <div class="project-info">
-                                    <h3>
-                                        <span>Xác thực</span>
-                                        <a href="./detail.html">Biệt thự view sông Thanh Đa</a>
-                                    </h3>
-                                    <div class="cnt">
-                                        <div class="row-grid row1">
-                                            <p>Giá: 4tr</p>
-                                            <p>Diện tích: 30m2</p>
-                                            <p>Vị trí: Tầng 2</p>
-                                        </div>
-                                        <div class="row-grid row2">
-                                            <p>
-                                                Địa chỉ:
-                                                <a href="#"><i class="fa-regular fa-map"></i></a>
-                                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                                            </p>
-                                            <p class="services open-modal" data-modal="services">Xem phí dịch vụ</p>
-                                        </div>
-                                        <div class="row-grid row3">
-                                            <div class="item">
-                                                <p class="ttl"><span><i class="fa-solid fa-bullseye"></i> Tiện ích</span></p>
-                                                <div class="list">
-                                                    <ul>
-                                                        <li>Có gác</li>
-                                                        <li>Có bếp</li>
-                                                        <li>Nuôi pet</li>
-                                                        <li>Tách bếp</li>
-                                                        <li>Máy giặt chung</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> Cửa sổ</li>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> Nước máy</li>
-                                                        <li>Giờ tự do</li>
-                                                        <li>Free wifi</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>Ban công</li>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> WC riêng</li>
-                                                        <li>Chung chủ</li>
-                                                        <li>Khóa vân tay</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <p class="ttl"><span><i class="fa-solid fa-bullseye"></i> Nội thất</span></p>
-                                                <div class="list">
-                                                    <ul>
-                                                        <li>Tủ lạnh</li>
-                                                        <li>Giường</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>Máy lạnh</li>
-                                                        <li>Tủ đồ</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>Máy giặt</li>
-                                                        <li>Full nội thất</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row-grid row4">
-                                            <table>
-                                                <tbody>
-                                                    <tr>
-                                                        <td colspan="2">
-                                                            <p class="furniture-prices open-modal" data-modal="furniture">
-                                                                Bảng giá thêm nội thất
-                                                                <i class="fa-solid fa-arrow-right"></i>
-                                                            </p>
-                                                        </td>
-                                                        <td><p class="calendar open-modal" data-modal="bookingModal">Hẹn xem</p></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <a href="./detail.html" class="link_full"></a>
-                                    <img src="./assets/img/welcome_img2.jpg" alt="Project" />
-                                </div>
-                                <div class="project-info">
-                                    <h3>
-                                        <span>Xác thực</span>
-                                        <a href="./detail.html">Biệt thự view sông Thanh Đa</a>
-                                    </h3>
-                                    <div class="cnt">
-                                        <div class="row-grid row1">
-                                            <p>Giá: 4tr</p>
-                                            <p>Diện tích: 30m2</p>
-                                            <p>Vị trí: Tầng 2</p>
-                                        </div>
-                                        <div class="row-grid row2">
-                                            <p>
-                                                Địa chỉ:
-                                                <a href="#"><i class="fa-regular fa-map"></i></a>
-                                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                                            </p>
-                                            <p class="services open-modal" data-modal="services">Xem phí dịch vụ</p>
-                                        </div>
-                                        <div class="row-grid row3">
-                                            <div class="item">
-                                                <p class="ttl"><span><i class="fa-solid fa-bullseye"></i> Tiện ích</span></p>
-                                                <div class="list">
-                                                    <ul>
-                                                        <li>Có gác</li>
-                                                        <li>Có bếp</li>
-                                                        <li>Nuôi pet</li>
-                                                        <li>Tách bếp</li>
-                                                        <li>Máy giặt chung</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> Cửa sổ</li>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> Nước máy</li>
-                                                        <li>Giờ tự do</li>
-                                                        <li>Free wifi</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>Ban công</li>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> WC riêng</li>
-                                                        <li>Chung chủ</li>
-                                                        <li>Khóa vân tay</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <p class="ttl"><span><i class="fa-solid fa-bullseye"></i> Nội thất</span></p>
-                                                <div class="list">
-                                                    <ul>
-                                                        <li>Tủ lạnh</li>
-                                                        <li>Giường</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>Máy lạnh</li>
-                                                        <li>Tủ đồ</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>Máy giặt</li>
-                                                        <li>Full nội thất</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row-grid row4">
-                                            <table>
-                                                <tbody>
-                                                    <tr>
-                                                        <td colspan="2">
-                                                            <p class="furniture-prices open-modal" data-modal="furniture">
-                                                                Bảng giá thêm nội thất
-                                                                <i class="fa-solid fa-arrow-right"></i>
-                                                            </p>
-                                                        </td>
-                                                        <td><p class="calendar open-modal" data-modal="bookingModal">Hẹn xem</p></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <a href="./detail.html" class="link_full"></a>
-                                    <img src="./assets/img/welcome_img2.jpg" alt="Project" />
-                                </div>
-                                <div class="project-info">
-                                    <h3>
-                                        <span>Xác thực</span>
-                                        <a href="./detail.html">Biệt thự view sông Thanh Đa</a>
-                                    </h3>
-                                    <div class="cnt">
-                                        <div class="row-grid row1">
-                                            <p>Giá: 4tr</p>
-                                            <p>Diện tích: 30m2</p>
-                                            <p>Vị trí: Tầng 2</p>
-                                        </div>
-                                        <div class="row-grid row2">
-                                            <p>
-                                                Địa chỉ:
-                                                <a href="#"><i class="fa-regular fa-map"></i></a>
-                                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                                            </p>
-                                            <p class="services open-modal" data-modal="services">Xem phí dịch vụ</p>
-                                        </div>
-                                        <div class="row-grid row3">
-                                            <div class="item">
-                                                <p class="ttl"><span><i class="fa-solid fa-bullseye"></i> Tiện ích</span></p>
-                                                <div class="list">
-                                                    <ul>
-                                                        <li>Có gác</li>
-                                                        <li>Có bếp</li>
-                                                        <li>Nuôi pet</li>
-                                                        <li>Tách bếp</li>
-                                                        <li>Máy giặt chung</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> Cửa sổ</li>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> Nước máy</li>
-                                                        <li>Giờ tự do</li>
-                                                        <li>Free wifi</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>Ban công</li>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> WC riêng</li>
-                                                        <li>Chung chủ</li>
-                                                        <li>Khóa vân tay</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <p class="ttl"><span><i class="fa-solid fa-bullseye"></i> Nội thất</span></p>
-                                                <div class="list">
-                                                    <ul>
-                                                        <li>Tủ lạnh</li>
-                                                        <li>Giường</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>Máy lạnh</li>
-                                                        <li>Tủ đồ</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>Máy giặt</li>
-                                                        <li>Full nội thất</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row-grid row4">
-                                            <table>
-                                                <tbody>
-                                                    <tr>
-                                                        <td colspan="2">
-                                                            <p class="furniture-prices open-modal" data-modal="furniture">
-                                                                Bảng giá thêm nội thất
-                                                                <i class="fa-solid fa-arrow-right"></i>
-                                                            </p>
-                                                        </td>
-                                                        <td><p class="calendar open-modal" data-modal="bookingModal">Hẹn xem</p></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <a href="./detail.html" class="link_full"></a>
-                                    <img src="./assets/img/welcome_img2.jpg" alt="Project" />
-                                </div>
-                                <div class="project-info">
-                                    <h3>
-                                        <span>Xác thực</span>
-                                        <a href="./detail.html">Biệt thự view sông Thanh Đa</a>
-                                    </h3>
-                                    <div class="cnt">
-                                        <div class="row-grid row1">
-                                            <p>Giá: 4tr</p>
-                                            <p>Diện tích: 30m2</p>
-                                            <p>Vị trí: Tầng 2</p>
-                                        </div>
-                                        <div class="row-grid row2">
-                                            <p>
-                                                Địa chỉ:
-                                                <a href="#"><i class="fa-regular fa-map"></i></a>
-                                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                                            </p>
-                                            <p class="services open-modal" data-modal="services">Xem phí dịch vụ</p>
-                                        </div>
-                                        <div class="row-grid row3">
-                                            <div class="item">
-                                                <p class="ttl"><span><i class="fa-solid fa-bullseye"></i> Tiện ích</span></p>
-                                                <div class="list">
-                                                    <ul>
-                                                        <li>Có gác</li>
-                                                        <li>Có bếp</li>
-                                                        <li>Nuôi pet</li>
-                                                        <li>Tách bếp</li>
-                                                        <li>Máy giặt chung</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> Cửa sổ</li>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> Nước máy</li>
-                                                        <li>Giờ tự do</li>
-                                                        <li>Free wifi</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>Ban công</li>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> WC riêng</li>
-                                                        <li>Chung chủ</li>
-                                                        <li>Khóa vân tay</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <p class="ttl"><span><i class="fa-solid fa-bullseye"></i> Nội thất</span></p>
-                                                <div class="list">
-                                                    <ul>
-                                                        <li>Tủ lạnh</li>
-                                                        <li>Giường</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>Máy lạnh</li>
-                                                        <li>Tủ đồ</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>Máy giặt</li>
-                                                        <li>Full nội thất</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row-grid row4">
-                                            <table>
-                                                <tbody>
-                                                    <tr>
-                                                        <td colspan="2">
-                                                            <p class="furniture-prices open-modal" data-modal="furniture">
-                                                                Bảng giá thêm nội thất
-                                                                <i class="fa-solid fa-arrow-right"></i>
-                                                            </p>
-                                                        </td>
-                                                        <td><p class="calendar open-modal" data-modal="bookingModal">Hẹn xem</p></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <a href="./detail.html" class="link_full"></a>
-                                    <img src="./assets/img/welcome_img2.jpg" alt="Project" />
-                                </div>
-                                <div class="project-info">
-                                    <h3>
-                                        <span>Xác thực</span>
-                                        <a href="./detail.html">Biệt thự view sông Thanh Đa</a>
-                                    </h3>
-                                    <div class="cnt">
-                                        <div class="row-grid row1">
-                                            <p>Giá: 4tr</p>
-                                            <p>Diện tích: 30m2</p>
-                                            <p>Vị trí: Tầng 2</p>
-                                        </div>
-                                        <div class="row-grid row2">
-                                            <p>
-                                                Địa chỉ:
-                                                <a href="#"><i class="fa-regular fa-map"></i></a>
-                                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                                            </p>
-                                            <p class="services open-modal" data-modal="services">Xem phí dịch vụ</p>
-                                        </div>
-                                        <div class="row-grid row3">
-                                            <div class="item">
-                                                <p class="ttl"><span><i class="fa-solid fa-bullseye"></i> Tiện ích</span></p>
-                                                <div class="list">
-                                                    <ul>
-                                                        <li>Có gác</li>
-                                                        <li>Có bếp</li>
-                                                        <li>Nuôi pet</li>
-                                                        <li>Tách bếp</li>
-                                                        <li>Máy giặt chung</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> Cửa sổ</li>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> Nước máy</li>
-                                                        <li>Giờ tự do</li>
-                                                        <li>Free wifi</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>Ban công</li>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> WC riêng</li>
-                                                        <li>Chung chủ</li>
-                                                        <li>Khóa vân tay</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <p class="ttl"><span><i class="fa-solid fa-bullseye"></i> Nội thất</span></p>
-                                                <div class="list">
-                                                    <ul>
-                                                        <li>Tủ lạnh</li>
-                                                        <li>Giường</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>Máy lạnh</li>
-                                                        <li>Tủ đồ</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>Máy giặt</li>
-                                                        <li>Full nội thất</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row-grid row4">
-                                            <table>
-                                                <tbody>
-                                                    <tr>
-                                                        <td colspan="2">
-                                                            <p class="furniture-prices open-modal" data-modal="furniture">
-                                                                Bảng giá thêm nội thất
-                                                                <i class="fa-solid fa-arrow-right"></i>
-                                                            </p>
-                                                        </td>
-                                                        <td><p class="calendar open-modal" data-modal="bookingModal">Hẹn xem</p></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <a href="./detail.html" class="link_full"></a>
-                                    <img src="./assets/img/welcome_img2.jpg" alt="Project" />
-                                </div>
-                                <div class="project-info">
-                                    <h3>
-                                        <span>Xác thực</span>
-                                        <a href="./detail.html">Biệt thự view sông Thanh Đa</a>
-                                    </h3>
-                                    <div class="cnt">
-                                        <div class="row-grid row1">
-                                            <p>Giá: 4tr</p>
-                                            <p>Diện tích: 30m2</p>
-                                            <p>Vị trí: Tầng 2</p>
-                                        </div>
-                                        <div class="row-grid row2">
-                                            <p>
-                                                Địa chỉ:
-                                                <a href="#"><i class="fa-regular fa-map"></i></a>
-                                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                                            </p>
-                                            <p class="services open-modal" data-modal="services">Xem phí dịch vụ</p>
-                                        </div>
-                                        <div class="row-grid row3">
-                                            <div class="item">
-                                                <p class="ttl"><span><i class="fa-solid fa-bullseye"></i> Tiện ích</span></p>
-                                                <div class="list">
-                                                    <ul>
-                                                        <li>Có gác</li>
-                                                        <li>Có bếp</li>
-                                                        <li>Nuôi pet</li>
-                                                        <li>Tách bếp</li>
-                                                        <li>Máy giặt chung</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> Cửa sổ</li>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> Nước máy</li>
-                                                        <li>Giờ tự do</li>
-                                                        <li>Free wifi</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>Ban công</li>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> WC riêng</li>
-                                                        <li>Chung chủ</li>
-                                                        <li>Khóa vân tay</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <p class="ttl"><span><i class="fa-solid fa-bullseye"></i> Nội thất</span></p>
-                                                <div class="list">
-                                                    <ul>
-                                                        <li>Tủ lạnh</li>
-                                                        <li>Giường</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>Máy lạnh</li>
-                                                        <li>Tủ đồ</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>Máy giặt</li>
-                                                        <li>Full nội thất</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row-grid row4">
-                                            <table>
-                                                <tbody>
-                                                    <tr>
-                                                        <td colspan="2">
-                                                            <p class="furniture-prices open-modal" data-modal="furniture">
-                                                                Bảng giá thêm nội thất
-                                                                <i class="fa-solid fa-arrow-right"></i>
-                                                            </p>
-                                                        </td>
-                                                        <td><p class="calendar open-modal" data-modal="bookingModal">Hẹn xem</p></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <a href="./detail.html" class="link_full"></a>
-                                    <img src="./assets/img/welcome_img2.jpg" alt="Project" />
-                                </div>
-                                <div class="project-info">
-                                    <h3>
-                                        <span>Xác thực</span>
-                                        <a href="./detail.html">Biệt thự view sông Thanh Đa</a>
-                                    </h3>
-                                    <div class="cnt">
-                                        <div class="row-grid row1">
-                                            <p>Giá: 4tr</p>
-                                            <p>Diện tích: 30m2</p>
-                                            <p>Vị trí: Tầng 2</p>
-                                        </div>
-                                        <div class="row-grid row2">
-                                            <p>
-                                                Địa chỉ:
-                                                <a href="#"><i class="fa-regular fa-map"></i></a>
-                                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                                            </p>
-                                            <p class="services open-modal" data-modal="services">Xem phí dịch vụ</p>
-                                        </div>
-                                        <div class="row-grid row3">
-                                            <div class="item">
-                                                <p class="ttl"><span><i class="fa-solid fa-bullseye"></i> Tiện ích</span></p>
-                                                <div class="list">
-                                                    <ul>
-                                                        <li>Có gác</li>
-                                                        <li>Có bếp</li>
-                                                        <li>Nuôi pet</li>
-                                                        <li>Tách bếp</li>
-                                                        <li>Máy giặt chung</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> Cửa sổ</li>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> Nước máy</li>
-                                                        <li>Giờ tự do</li>
-                                                        <li>Free wifi</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>Ban công</li>
-                                                        <li class="active"><i class="fa-solid fa-check"></i> WC riêng</li>
-                                                        <li>Chung chủ</li>
-                                                        <li>Khóa vân tay</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <p class="ttl"><span><i class="fa-solid fa-bullseye"></i> Nội thất</span></p>
-                                                <div class="list">
-                                                    <ul>
-                                                        <li>Tủ lạnh</li>
-                                                        <li>Giường</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>Máy lạnh</li>
-                                                        <li>Tủ đồ</li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>Máy giặt</li>
-                                                        <li>Full nội thất</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row-grid row4">
-                                            <table>
-                                                <tbody>
-                                                    <tr>
-                                                        <td colspan="2">
-                                                            <p class="furniture-prices open-modal" data-modal="furniture">
-                                                                Bảng giá thêm nội thất
-                                                                <i class="fa-solid fa-arrow-right"></i>
-                                                            </p>
-                                                        </td>
-                                                        <td><p class="calendar open-modal" data-modal="bookingModal">Hẹn xem</p></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        
-                        <div class="text-center">
-                            <a href="./properties.html" class="btn-loadmore">Xem thêm</a>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Vision & Mission -->
-                <section class="vision-mission">
-                    <div class="container">
-                        <div class="section-header">
-                            <span class="section-subtitle">LocHome</span>
-                            <h2>TẦM NHÌN VÀ SỨ MỆNH</h2>
-                            <p>
-                                Tổng hợp các dự án bất động sản tại Hà Nội, Đà Nẵng, TP Hồ Chí Minh...và cách tính thành
-                                khác hot nhất thời điểm hiện tại
-                            </p>
-                        </div>
-
-                        <div class="vision-grid">
-                            <div class="vision-card">
-                                <div class="vision-icon">
-                                    <i class="fas fa-bullseye"></i>
-                                </div>
-                                <h3>Tầm nhìn</h3>
-                                <p>
-                                    LocHome quyết tâm vươn mình trở thành đơn vị tư vấn mua, bán và đầu tư bất động sản
-                                    uy tín tại Việt Nam
-                                </p>
-                            </div>
-
-                            <div class="vision-card">
-                                <div class="vision-icon">
-                                    <i class="fas fa-trophy"></i>
-                                </div>
-                                <h3>Sứ mệnh</h3>
-                                <p>
-                                    Sứ mệnh "Bất động sản thật – Giá trị thật" với phương pháp bán nhanh bất động sản
-                                    trong 30 ngày.
-                                </p>
-                            </div>
-
-                            <div class="vision-card">
-                                <div class="vision-icon">
-                                    <i class="fas fa-handshake"></i>
-                                </div>
-                                <h3>Giá trị cốt lõi</h3>
-                                <p>
-                                    Thẻ mạnh về nhân sự cùng nhu kinh nghiệm trên 15 năm kinh nghiệm với hơn 500 bất
-                                    động sản đã bán thành công
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>  
-
-
-                <!-- Team -->
-                <section class="team">
-                    <div class="container">
-                        <div class="section-header">
-                            <h2>ĐÁNH GIÁ TỪ KHÁCH HÀNG</h2>
-                            <p>Những chia sẻ chân thực từ khách hàng đã sử dụng dịch vụ của chúng tôi</p>
-                        </div>
-
-                        <div class="team-grid">
-                            <div class="team-card">
-                                <img
-                                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200"
-                                    alt="Customer" />
-                                <h3>Anh Tuấn</h3>
-                                <p class="position">Khách hàng tại TP.HCM</p>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <p class="testimonial">
-                                    "Dịch vụ tuyệt vời! Tôi đã tìm được căn nhà mơ ước chỉ sau 2 tuần. Đội ngũ tư vấn
-                                    rất chuyên nghiệp và nhiệt tình."
-                                </p>
-                            </div>
-
-                            <div class="team-card">
-                                <img
-                                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200"
-                                    alt="Customer" />
-                                <h3>Chị Lan</h3>
-                                <p class="position">Khách hàng tại Hà Nội</p>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <p class="testimonial">
-                                    "Rất hài lòng với sự hỗ trợ của LocHome. Thủ tục nhanh gọn, minh bạch và đáng tin
-                                    cậy."
-                                </p>
-                            </div>
-
-                            <div class="team-card">
-                                <img
-                                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200"
-                                    alt="Customer" />
-                                <h3>Anh Minh</h3>
-                                <p class="position">Khách hàng tại Đà Nẵng</p>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <p class="testimonial">
-                                    "Tôi đã mua được biệt thự với giá tốt nhờ sự tư vấn của LocHome. Cảm ơn đội ngũ rất
-                                    nhiều!"
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -1734,12 +1047,6 @@
                                 <img src="./assets/img/ft_logo.png" width="177" height="142" alt="LocHome" />
                             </div>
                             <p>Đến LocHome - Tìm trọ dễ òm</p>
-                            <div class="social-links">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-youtube"></i></a>
-                            </div>
                         </div>
 
                         <div class="footer-col">
@@ -1747,19 +1054,89 @@
                             <ul class="contact-info">
                                 <li>
                                     <i class="fas fa-map-marker-alt"></i>
-                                    123 Đường ABC, Quận 1, TP.HCM
+                                    310/15 Dương Quảng Hàm Phường 5 Gò Vấp
                                 </li>
                                 <li>
                                     <i class="fas fa-phone"></i>
                                     <a href="tel:0327556776">0327 556 776</a>
                                 </li>
                                 <li>
-                                    <i class="fas fa-envelope"></i>
-                                    contact@LocHome.vn
+                                    <div class="info-list">
+                                        <div class="info-item">
+                                            <div class="info-icon" style="color: white">
+                                                <strong>Zalo</strong>
+                                            </div>
+                                            <div class="info-text">
+                                                <p class="ttl">Zalo</p>
+                                                <a href="https://zalo.me/g/clpvft406" target="_blank">@Zalo</a>
+                                            </div>
+                                        </div>
+                                        <div class="info-item">
+                                            <div class="info-icon">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </div>
+                                            <div class="info-text">
+                                                <h4>Facebook</h4>
+                                                <a href="https://www.facebook.com/profile.php?id=61584523752326" target="_blank">@Facebook</a>
+                                            </div>
+                                        </div>
+                                        <div class="info-item">
+                                            <div class="info-icon">
+                                                <i class="fa-brands fa-tiktok"></i>
+                                            </div>
+                                            <div class="info-text">
+                                                <h4>Tiktok</h4>
+                                                <a href="https://www.tiktok.com/@loc.home" target="_blank">@tiktok</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
+
+
+                    <!-- <div class="info-list">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Hotline</h4>
+                                <a href="tel:0327566776">0327 566 776</a>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon" style="color: white">
+                                <strong>Zalo</strong>
+                            </div>
+                            <div class="info-text">
+                                <h4>Zalo</h4>
+                                <a href="https://zalo.me/g/clpvft406" target="_blank">@Zalo</a>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Facebook</h4>
+                                <a href="https://www.facebook.com/profile.php?id=61584523752326" target="_blank">@Facebook</a>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Tiktok</h4>
+                                <a href="https://www.tiktok.com/@loc.home" target="_blank">@tiktok</a>
+                            </div>
+                        </div>
+                    </div> -->
 
                     <div class="footer-bottom">
                         <p>&copy; 2025 LocHome. All rights reserved.</p>
